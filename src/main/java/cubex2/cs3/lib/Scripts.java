@@ -54,7 +54,6 @@ public class Scripts
     public static final ScriptInfo BLOCK_ON_WALKING = addBlock("onWalking", "world", "position", "entity");
     public static final ScriptInfo BLOCK_ON_PLACED = addBlock("onPlaced", "world", "position");
     public static final ScriptInfo BLOCK_ON_CLICKED = addBlock("onClicked", "world", "position", "player");
-    public static final ScriptInfo BLOCK_ON_POOP = addBlock("onPoop","world","position","player");
     public static final ScriptInfo BLOCK_ON_COLLIDED = addBlock("onCollided", "world", "position", "entity");
     public static final ScriptInfo BLOCK_ON_PLACED_BY_PLAYER = addBlock("onPlacedByPlayer", "world", "position", "player");
     public static final ScriptInfo BLOCK_ON_PLACED_BY = addBlock("onPlacedBy", "world", "position", "living");

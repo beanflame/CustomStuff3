@@ -1,0 +1,10 @@
+TITLE setDamage
+MAX_WIDTH
+
+TEXT --{
+setDamage(damageValue)
+
+Sets the stacks damage value
+
+- damageValue (int): The new damage value
+}--

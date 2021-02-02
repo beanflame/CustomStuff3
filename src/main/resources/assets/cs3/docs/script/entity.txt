@@ -1,0 +1,39 @@
+TITLE entity
+TYPE list
+SORTED
+
+ELEM_PREFIX script/entity/
+
+ELEM setFire setFire
+ELEM extinguish extinguish
+ELEM setAir setAir
+ELEM dropItem dropItem
+ELEM getPosX getPosX
+ELEM getPosY getPosY
+ELEM getPosZ getPosZ
+ELEM setPosX setPosX
+ELEM setPosY setPosY
+ELEM setPosZ setPosZ
+ELEM setPosition setPosition
+ELEM move move
+ELEM addVelocityToLookingDirection addVelocityToLookingDirection
+ELEM setVelocityToLookingDirection setVelocityToLookingDirection
+ELEM addVelocity addVelocity
+ELEM setVelocity setVelocity
+ELEM setVelocityX setVelocityX
+ELEM setVelocityY setVelocityY
+ELEM setVelocityZ setVelocityZ
+ELEM getVelocityX getVelocityX
+ELEM getVelocityY getVelocityY
+ELEM getVelocityZ getVelocityZ
+ELEM getFallDistance getFallDistance
+ELEM setFallDistance setFallDistance
+ELEM getName getName
+ELEM shear shear
+ELEM isLiving isLiving
+ELEM asLiving asLiving
+ELEM isPlayer isPlayer
+ELEM asPlayer asPlayer
+ELEM isItem isItem
+ELEM asItem asItem
+ELEM setDead setDead

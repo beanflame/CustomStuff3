@@ -1,0 +1,10 @@
+TITLE removeExperienceLevel
+MAX_WIDTH
+
+TEXT --{
+removeExperienceLevel(amount)
+
+Removes levels from the player
+
+- amount (int): The amount of levels to remove
+}--

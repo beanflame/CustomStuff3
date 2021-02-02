@@ -1,0 +1,11 @@
+TITLE setFloatData
+MAX_WIDTH
+
+TEXT --{
+setFloatData(name, data)
+
+Sets the float data with the given name.
+
+- name (string): The name of the data.
+- data (float): The data to use.
+}--

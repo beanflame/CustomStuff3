@@ -1,0 +1,6 @@
+TEXT --{
+This script is executed when a player left clicks the block.
+
+Available objects:
+}--
+SCRIPT_OBJECTS onClicked BLOCK

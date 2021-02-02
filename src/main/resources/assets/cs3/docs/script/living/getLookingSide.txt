@@ -1,0 +1,8 @@
+TITLE getLookingSide
+MAX_WIDTH
+
+TEXT --{
+int getLookingSide()
+
+Returns the side the living is looking at (0, 1, 2 or 3)
+}--

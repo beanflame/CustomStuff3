@@ -1,0 +1,14 @@
+TITLE hasEnchantment
+MAX_WIDTH
+
+TEXT --{
+bool hasEnchantment(slotId, id)
+ level doesn't matter
+bool hasEnchantment(slotId, id, level)
+
+Returns true if the stack has the given enchantment.
+
+- slotId (int): The id of the slot
+- id (int): The id of the enchantment
+- level (int): The level of the enchantment
+}--

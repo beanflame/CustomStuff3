@@ -1,0 +1,6 @@
+TEXT --{
+This script is executed after the item is eaten.
+
+Available objects:
+}--
+SCRIPT_OBJECTS onEaten ITEM

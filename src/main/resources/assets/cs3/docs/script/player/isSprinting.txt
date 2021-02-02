@@ -1,0 +1,8 @@
+TITLE isSprinting
+MAX_WIDTH
+
+TEXT --{
+bool isSprinting()
+
+Returns true if the player is sprinting.
+}--

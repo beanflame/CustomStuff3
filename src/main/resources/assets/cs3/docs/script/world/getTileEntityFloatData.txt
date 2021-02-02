@@ -1,0 +1,13 @@
+TITLE getTileEntityFloatData
+MAX_WIDTH
+
+TEXT --{
+float getTileEntityFloatData(position, name)
+float getTileEntityFloatData(x, y, z, name)
+
+Gets the float data with the given name. Returns -1.0f if the data doesn't exist.
+
+- position: The position of the tile entity
+- x, y, z (int): The coordinates of the tile entity
+- name (string): The name of the data
+}--

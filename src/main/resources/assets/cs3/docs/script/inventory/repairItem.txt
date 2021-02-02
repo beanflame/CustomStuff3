@@ -1,0 +1,13 @@
+TITLE repairItem
+MAX_WIDTH
+
+TEXT --{
+repairItem(slotId)
+ completely repairs the item
+repairItem(slotId, amount)
+
+Repair the item in the slot with the given id. If the slot is empty or the item in the slot isn't damageable, this does nothing
+
+- slotId (int): The id of the slot
+- amount (int): The amount of damage to remove
+}--

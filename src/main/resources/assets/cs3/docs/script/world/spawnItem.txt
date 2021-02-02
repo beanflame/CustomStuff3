@@ -1,0 +1,15 @@
+TITLE spawnItem
+MAX_WIDTH
+
+TEXT --{
+spawnItem(position, itemName, count, damage)
+spawnItem(x, y, z, itemName, count, damage)
+
+Spawns an item.
+
+- position: The position of the item
+- x, y, z (float): The coordinates of the item
+- itemName (string): The name of the item to spawn
+- count (int): The stack size of the item
+- damage (int): The damage value of the item
+}--

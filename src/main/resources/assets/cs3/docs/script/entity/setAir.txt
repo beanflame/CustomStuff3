@@ -1,0 +1,10 @@
+TITLE setAir
+MAX_WIDTH
+
+TEXT --{
+setAir(air)
+
+Sets the air of the entity
+
+- air (int): The new air
+}--

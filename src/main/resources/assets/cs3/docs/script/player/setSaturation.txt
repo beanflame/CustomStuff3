@@ -1,0 +1,10 @@
+TITLE setSaturation
+MAX_WIDTH
+
+TEXT --{
+setSaturation(saturation)
+
+Set the saturation of the player.
+
+- saturation (float): The new saturation
+}--

@@ -1,0 +1,8 @@
+TITLE isLiving
+MAX_WIDTH
+
+TEXT --{
+bool isLiving()
+
+Returns true if the entity is a living
+}--

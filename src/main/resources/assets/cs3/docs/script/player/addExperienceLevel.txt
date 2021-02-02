@@ -1,0 +1,10 @@
+TITLE addExperienceLevel
+MAX_WIDTH
+
+TEXT --{
+addExperienceLevel(amount)
+
+Adds levels to the player
+
+- amount (int): The amount of levels to add
+}--

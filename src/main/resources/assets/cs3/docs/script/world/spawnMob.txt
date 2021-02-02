@@ -1,0 +1,13 @@
+TITLE spawnMob
+MAX_WIDTH
+
+TEXT --{
+spawnMob(position, name)
+spawnMob(x, y, z, name)
+
+Spawns a mob.
+
+- position: The position of the mob
+- x, y, z (float): The coordinates of the mob
+- name (string): The name of the mob to spawn
+}--

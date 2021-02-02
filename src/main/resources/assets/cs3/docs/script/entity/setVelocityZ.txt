@@ -1,0 +1,10 @@
+TITLE setVelocityZ
+MAX_WIDTH
+
+TEXT --{
+setVelocityZ(y)
+
+Sets the velocity in z-direction
+
+- z (float): The new velocity
+}--

@@ -1,0 +1,6 @@
+TEXT --{
+This script is executed when the player destroys a block with the item.
+
+Available objects:
+}--
+SCRIPT_OBJECTS onBlockDestroyed ITEM

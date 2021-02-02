@@ -1,0 +1,10 @@
+TITLE removeExperience
+MAX_WIDTH
+
+TEXT --{
+removeExperience(amount)
+
+Removes XP from the player
+
+- amount (int): The amount of XP to remove
+}--

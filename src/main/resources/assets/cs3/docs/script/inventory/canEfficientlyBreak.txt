@@ -1,0 +1,12 @@
+TITLE canEfficientlyBreak
+MAX_WIDTH
+
+TEXT --{
+bool canEfficientlyBreak(slotId, blockName, metadata)
+
+Checks if the itemstack can efficiently break the given block. It actually checks if it can harvest the block and if its efficiency against the block is higher than 1.0.
+
+- slotId (int): The id of the slot
+- blockName (string): The name of the block
+- metadata (int): The metadata of the block
+}--

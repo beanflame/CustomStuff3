@@ -1,0 +1,6 @@
+TEXT --{
+This script is executed when an entity falls upon the block.
+
+Available objects:
+}--
+SCRIPT_OBJECTS onFallenUpon BLOCK

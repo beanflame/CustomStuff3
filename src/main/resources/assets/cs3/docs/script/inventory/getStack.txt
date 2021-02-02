@@ -1,0 +1,10 @@
+TITLE getStack
+MAX_WIDTH
+
+TEXT --{
+itemstack getStack(slot)
+
+Returns the stack in the given slot or null if it is empty.
+
+- slot (int): The id of the slot.
+}--

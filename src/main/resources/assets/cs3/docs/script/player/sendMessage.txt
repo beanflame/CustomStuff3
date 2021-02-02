@@ -1,0 +1,10 @@
+TITLE sendMessage
+MAX_WIDTH
+
+TEXT --{
+sendMessage(message)
+
+Displays a message for the player.
+
+- message (string): The message to add to the player
+}--

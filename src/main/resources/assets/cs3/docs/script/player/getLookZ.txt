@@ -1,0 +1,8 @@
+TITLE getLookZ
+MAX_WIDTH
+
+TEXT --{
+int getLookZ()
+
+Returns the z-coordinate of the block that the player is looking at.
+}--

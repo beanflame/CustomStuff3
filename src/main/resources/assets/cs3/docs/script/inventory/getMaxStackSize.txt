@@ -1,0 +1,10 @@
+TITLE getMaxStackSize
+MAX_WIDTH
+
+TEXT --{
+int getMaxStackSize(slotId)
+
+Returns the max stack size of the item in the slot or -1 if the slot is empty.
+
+- slotId (int): The id of the slot
+}--

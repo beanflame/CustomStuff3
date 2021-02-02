@@ -1,0 +1,8 @@
+TITLE getHunger
+MAX_WIDTH
+
+TEXT --{
+int getHunger()
+
+Returns the hunger of the player.
+}--

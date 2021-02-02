@@ -1,0 +1,17 @@
+TITLE placeBlock
+MAX_WIDTH
+
+TEXT --{
+bool placeBlock(position, side, blockName, metadata, useFromInventory)
+bool placeBlock(x, y, z, side, blockName, metadata, useFromInventory)
+
+Makes the player place a block.
+Returns true if the block has been placed.
+
+- position: The position of the block to place on
+- x, y, z (int): The coordinates of the block to place on
+- side (int): The side to place the block on
+- blockName (string): The name of the block to place
+- metadata (int): The metadata of the block to place
+- useFromInventory (bool): If true, the player need to have the block in his inventory and it will be used to place the block.
+}--

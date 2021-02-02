@@ -1,0 +1,7 @@
+TEXT --{
+This script is executed when the player left clicks a living with the item. This is executed before the living is damaged.
+If the living is a player, onLeftClickPlayer is executed instead.
+
+Available objects:
+}--
+SCRIPT_OBJECTS onLeftClickLiving ITEM

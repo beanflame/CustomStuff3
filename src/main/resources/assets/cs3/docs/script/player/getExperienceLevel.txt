@@ -1,0 +1,8 @@
+TITLE getExperienceLevel
+MAX_WIDTH
+
+TEXT --{
+int getExperienceLevel()
+
+Returns the level of the player.
+}--

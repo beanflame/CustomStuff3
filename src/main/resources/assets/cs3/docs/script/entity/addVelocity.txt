@@ -1,0 +1,12 @@
+TITLE addVelocity
+MAX_WIDTH
+
+TEXT --{
+addVelocity(x, y, z)
+
+Adds velocity to the entity
+
+- x (float): The velocity in x-direction
+- y (float): The velocity in y-direction
+- z (float): The velocity in z-direction
+}--

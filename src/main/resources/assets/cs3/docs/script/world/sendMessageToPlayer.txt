@@ -1,0 +1,11 @@
+TITLE sendMessageToPlayer
+MAX_WIDTH
+
+TEXT --{
+int sendMessageToPlayer(player, message)
+
+Sends a message to the given player.
+
+- player (string): The name of the player
+- message (string): The message to send
+}--

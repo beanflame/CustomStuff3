@@ -1,0 +1,12 @@
+TITLE getBlockLightLevel
+MAX_WIDTH
+
+TEXT --{
+int getBlockLightLevel(position)
+int getBlockLightLevel(x, y, z)
+
+Gets the light level of the block.
+
+- position: The position of the block
+- x, y, z (int): The coordinates of the block
+}--

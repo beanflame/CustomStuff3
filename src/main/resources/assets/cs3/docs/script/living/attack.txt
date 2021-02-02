@@ -1,0 +1,10 @@
+TITLE attack
+MAX_WIDTH
+
+TEXT --{
+attack(damage)
+
+Attacks the living
+
+- damage (int): The damage to add
+}--

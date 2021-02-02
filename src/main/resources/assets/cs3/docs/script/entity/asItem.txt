@@ -1,0 +1,8 @@
+TITLE asItem
+MAX_WIDTH
+
+TEXT --{
+item asItem()
+
+Returns the entity as an item.
+}--

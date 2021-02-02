@@ -1,0 +1,10 @@
+TITLE getDamage
+MAX_WIDTH
+
+TEXT --{
+int getDamage(slotId)
+
+Returns the damage value of the item in the slot or -1 if the slot is empty.
+
+- slotId (int): The id of the slot
+}--

@@ -1,0 +1,5 @@
+TITLE hitX
+
+TEXT --{
+This is a floating point number that holds the horizontal position of the clicked side. 0.0 is the left edge, 1.0 is the right edge.
+}--

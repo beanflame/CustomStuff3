@@ -1,0 +1,5 @@
+TITLE hitY
+
+TEXT --{
+This is a floating point number that holds the vertical position of the clicked side. 0.0 is the bottom edge, 1.0 is the top edge.
+}--

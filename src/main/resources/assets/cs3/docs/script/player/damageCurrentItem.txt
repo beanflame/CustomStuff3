@@ -1,0 +1,10 @@
+TITLE damageCurrentItem
+MAX_WIDTH
+
+TEXT --{
+damageCurrentItem(amount)
+
+Damages the item currently hold by the player.
+
+- amount (int): The amount of damage to add to the item
+}--

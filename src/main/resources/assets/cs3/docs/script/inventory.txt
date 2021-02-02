@@ -1,0 +1,38 @@
+TITLE inventory
+TYPE list
+SORTED
+
+ELEM_PREFIX script/inventory/
+
+ELEM clear clear
+ELEM fill fill
+ELEM add add
+ELEM remove remove
+ELEM clearSlot clearSlot
+ELEM fillSlot fillSlot
+ELEM setSlot setSlot
+ELEM addToSlot addToSlot
+ELEM removeFromSlot removeFromSlot
+ELEM damageItem damageItem
+ELEM repairItem repairItem
+ELEM getItemName getItemName
+ELEM getStackSize getStackSize
+ELEM getMaxStackSize getMaxStackSize
+ELEM getDamage getDamage
+ELEM getItemCount getItemCount
+ELEM moveStack moveStack
+ELEM isItemEqual isItemEqual
+ELEM hasEnchantment hasEnchantment
+ELEM clearEnchantments clearEnchantments
+ELEM addEnchantment addEnchantment
+ELEM removeEnchantment removeEnchantment
+ELEM getIntData getIntData
+ELEM getFloatData getFloatData
+ELEM getStringData getStringData
+ELEM setIntData setIntData
+ELEM setFloatData setFloatData
+ELEM setStringData setStringData
+ELEM canEfficientlyBreak canEfficientlyBreak
+ELEM canHarvest canHarvest
+ELEM isFuel isFuel
+ELEM getStack getStack

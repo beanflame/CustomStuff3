@@ -1,0 +1,12 @@
+TITLE createThunderbolt
+MAX_WIDTH
+
+TEXT --{
+createThunderbolt(position)
+createThunderbolt(x, y, z)
+
+Creates a thunderbolt.
+
+- position: The position of the thunderbolt
+- x, y, z (float): The coordinates of the thunderbolt
+}--

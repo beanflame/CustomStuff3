@@ -1,0 +1,10 @@
+TITLE isFuel
+MAX_WIDTH
+
+TEXT --{
+bool isFuel(slotId)
+
+Returns true if the item in the slot is fuel for the furnace.
+
+- slotId (int): The id of the slot
+}--

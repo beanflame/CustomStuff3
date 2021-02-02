@@ -1,0 +1,10 @@
+TITLE setHealth
+MAX_WIDTH
+
+TEXT --{
+setHealth(health)
+
+Sets the health of the living
+
+- health (int): The new health
+}--

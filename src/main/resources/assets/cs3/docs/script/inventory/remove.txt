@@ -1,0 +1,13 @@
+TITLE remove
+MAX_WIDTH
+
+TEXT --{
+int remove(itemName, damageValue, amount)
+
+Tries to remove the given number of items from the inventory
+Returns the number of items removed.
+
+- itemName (string): The name of the item
+- damageValue (string): The damage value of the item
+- amount (int): The number of items to remove
+}--

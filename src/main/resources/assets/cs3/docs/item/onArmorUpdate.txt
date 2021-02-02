@@ -1,0 +1,6 @@
+TEXT --{
+This script is executed every tick if the item is in one of the armor slots.
+
+Available objects:
+}--
+SCRIPT_OBJECTS onArmorUpdate ITEM

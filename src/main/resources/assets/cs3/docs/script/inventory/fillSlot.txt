@@ -1,0 +1,11 @@
+TITLE fillSlot
+MAX_WIDTH
+
+TEXT --{
+int fillSlot(slotId)
+
+Fill up the slot with given id. If the slot is empty, this does nothing.
+Returns the number of items added to the slot.
+
+- slotId (int): The id of the slot
+}--

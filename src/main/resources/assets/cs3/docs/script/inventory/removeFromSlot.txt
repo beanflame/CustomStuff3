@@ -1,0 +1,12 @@
+TITLE removeFromSlot
+MAX_WIDTH
+
+TEXT --{
+int removeFromSlot(slotId, amount)
+
+Removes the given number of items from the slot. If the slot is empty, this does nothing.
+Returns the number of items removed from the slot.
+
+- slotId (int): The id of the slot
+- amount (int): The number of items to remove
+}--

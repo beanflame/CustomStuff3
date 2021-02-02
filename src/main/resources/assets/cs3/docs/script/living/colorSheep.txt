@@ -1,0 +1,11 @@
+TITLE colorSheep
+MAX_WIDTH
+
+TEXT --{
+bool colorSheep(color)
+
+Changes the color of the sheep.
+Returns true if the color of the sheep has been changed.
+
+- color (int): The metadata of the dye you want its color. So if you want to color the sheep red you have to set this to 1.
+}--

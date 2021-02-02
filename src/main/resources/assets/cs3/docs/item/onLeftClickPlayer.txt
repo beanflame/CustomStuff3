@@ -1,0 +1,6 @@
+TEXT --{
+This script is executed when the player left clicks a player with the item. It is called before the player is damaged.
+
+Available objects:
+}--
+SCRIPT_OBJECTS onLeftClickPlayer ITEM

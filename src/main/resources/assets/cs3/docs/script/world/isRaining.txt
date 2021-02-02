@@ -1,0 +1,8 @@
+TITLE isRaining
+MAX_WIDTH
+
+TEXT --{
+bool isRaining()
+
+Returns true if it is raining, false otherwise.
+}--

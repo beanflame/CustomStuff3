@@ -1,0 +1,12 @@
+TITLE setFloatData
+MAX_WIDTH
+
+TEXT --{
+setFloatData(slotId, name, data)
+
+Sets the float data with the given name.
+
+- slotId (int): The id of the slot
+- name (string): The name of the data.
+- data (float): The data to use.
+}--

@@ -1,0 +1,11 @@
+TITLE openItemGui
+MAX_WIDTH
+
+TEXT --{
+openItemGui(guiName, slotId)
+
+Opens an item inventory gui for the player
+
+- guiName (string): The name of the gui
+- slotId (int): The id of the slot of the itemstack
+}--

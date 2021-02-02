@@ -1,0 +1,12 @@
+TITLE fill
+MAX_WIDTH
+
+TEXT --{
+int fill(itemName, damageValue)
+
+Add as many of the given item to inventory as possible.
+Returns the number of items added.
+
+- itemName (string): The name of the item
+- damageValue (string): The damage value of the item
+}--

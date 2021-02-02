@@ -1,0 +1,6 @@
+TEXT --{
+This script is executed when the player right clicks an entity with the item. If the entity is a player, onUseOnPlayer is executed instead of onUseOnEntity.
+
+Available objects:
+}--
+SCRIPT_OBJECTS onUseOnEntity ITEM

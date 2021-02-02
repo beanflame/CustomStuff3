@@ -1,0 +1,11 @@
+TITLE canHarvest
+MAX_WIDTH
+
+TEXT --{
+bool canHarvest(slotId, blockName)
+
+Checks if the itemstack can harvest the given block.
+
+- slotId (int): The id of the slot
+- blockName (string): The name of the block
+}--

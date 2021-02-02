@@ -1,0 +1,12 @@
+TITLE dropItem
+MAX_WIDTH
+
+TEXT --{
+dropItem(itemName, damageValue, stackSize)
+
+Drops an item at the position of the entity
+
+- itemName (string): The name of the item
+- damageValue (int): The damage value of the item
+- stackSize (int): The stack size of the item
+}--

@@ -1,0 +1,8 @@
+TITLE isInCreative
+MAX_WIDTH
+
+TEXT --{
+bool isInCreative()
+
+Returns true if the player is in creative mode.
+}--

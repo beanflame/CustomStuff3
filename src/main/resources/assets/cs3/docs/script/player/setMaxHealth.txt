@@ -1,0 +1,10 @@
+TITLE setMaxHealth
+MAX_WIDTH
+
+TEXT --{
+setMaxHealth(value)
+
+Sets the maximum health of the player.
+
+- value (int): The new max health
+}--

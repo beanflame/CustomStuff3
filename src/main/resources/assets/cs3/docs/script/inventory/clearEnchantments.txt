@@ -1,0 +1,10 @@
+TITLE clearEnchantments
+MAX_WIDTH
+
+TEXT --{
+clearEnchantments(slotId)
+
+Removes all enchantments from the stack in the slot.
+
+- slotId (int): The id of the slot
+}--

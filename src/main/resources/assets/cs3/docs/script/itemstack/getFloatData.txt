@@ -1,0 +1,10 @@
+TITLE getFloatData
+MAX_WIDTH
+
+TEXT --{
+float getFloatData(name)
+
+Returns the data with the given name or -1.0 if it doesn't exist.
+
+- name (string): The name of the data.
+}--

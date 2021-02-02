@@ -1,0 +1,8 @@
+TITLE getPosY
+MAX_WIDTH
+
+TEXT --{
+float getPosY()
+
+Returns the y-position of the entity
+}--

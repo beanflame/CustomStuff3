@@ -1,0 +1,10 @@
+TITLE setVelocityX
+MAX_WIDTH
+
+TEXT --{
+setVelocityX(x)
+
+Sets the velocity in x-direction
+
+- x (float): The new velocity
+}--

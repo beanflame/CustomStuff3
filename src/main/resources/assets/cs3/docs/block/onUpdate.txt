@@ -1,0 +1,7 @@
+TEXT --{
+This script is executed every tickCount ticks when the block is in the world.
+This is only called server side, which means that doing client only things, like spawning particles, will not work.
+
+Available objects:
+}--
+SCRIPT_OBJECTS onUpdate BLOCK

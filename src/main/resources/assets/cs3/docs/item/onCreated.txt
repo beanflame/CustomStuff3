@@ -1,0 +1,6 @@
+TEXT --{
+This script is executed when the item is put out of the crafting result slot.
+
+Available objects:
+}--
+SCRIPT_OBJECTS onCreated ITEM

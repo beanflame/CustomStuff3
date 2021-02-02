@@ -1,0 +1,8 @@
+TITLE getInventory
+MAX_WIDTH
+
+TEXT --{
+inventory getInventory()
+
+Gets the players inventory.
+}--

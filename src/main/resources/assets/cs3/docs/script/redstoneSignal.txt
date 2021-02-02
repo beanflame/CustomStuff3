@@ -1,0 +1,5 @@
+TITLE redstoneSignal
+
+TEXT --{
+This a boolean that is true if the block receives a redstone signal and false if not.
+}--

@@ -1,0 +1,8 @@
+TITLE clear
+MAX_WIDTH
+
+TEXT --{
+clear()
+
+Deletes all items in the inventory.
+}--

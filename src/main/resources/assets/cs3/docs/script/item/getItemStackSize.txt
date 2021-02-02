@@ -1,0 +1,8 @@
+TITLE getItemStackSize
+MAX_WIDTH
+
+TEXT --{
+int getItemStackSize()
+
+Returns the stack size of the item.
+}--

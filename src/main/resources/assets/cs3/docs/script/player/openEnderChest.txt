@@ -1,0 +1,11 @@
+TITLE openEnderChest
+MAX_WIDTH
+
+TEXT --{
+openEnderChest()
+openEnderChest(customName)
+
+Opens the ender chest inventory of the player
+
+- customName (string): The text displays above the chest inventory. Default is "Ender Chest".
+}--

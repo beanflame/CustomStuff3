@@ -1,0 +1,46 @@
+TITLE player
+TYPE list
+SORTED
+
+ELEM_PREFIX script/player/
+
+ELEM setHunger setHunger
+ELEM getHunger getHunger
+ELEM setSaturation setSaturation
+ELEM getSaturation getSaturation
+ELEM setStepHeight setStepHeight
+ELEM getStepHeight getStepHeight
+ELEM sendMessage sendMessage
+ELEM sendChat sendChat
+ELEM setItemInUse setItemInUse
+ELEM placeBlock placeBlock
+ELEM getLookX getLookX
+ELEM getLookY getLookY
+ELEM getLookZ getLookZ
+ELEM addExperience addExperience
+ELEM removeExperience removeExperience
+ELEM setExperience setExperience
+ELEM addExperienceLevel addExperienceLevel
+ELEM removeExperienceLevel removeExperienceLevel
+ELEM setExperienceLevel setExperienceLevel
+ELEM getExperience getExperience
+ELEM getExperienceLevel getExperienceLevel
+ELEM getHorizontalAngle getHorizontalAngle
+ELEM getVerticalAngle getVerticalAngle
+ELEM getUsername getUsername
+ELEM isSneaking isSneaking
+ELEM isSprinting isSprinting
+ELEM setMaxHealth setMaxHealth
+ELEM swingItem swingItem
+ELEM isInCreative isInCreative
+ELEM getInventory getInventory
+ELEM getCurrentSlot getCurrentSlot
+ELEM openEnderChest openEnderChest
+ELEM openGui openGui
+ELEM openItemGui openItemGui
+ELEM openBlockGui openBlockGui
+ELEM damageCurrentItem damageCurrentItem
+
+ELEM_PREFIX script/
+
+ELEM "Everything from living" living

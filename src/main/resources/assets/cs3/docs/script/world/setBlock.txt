@@ -1,0 +1,18 @@
+TITLE setBlock
+MAX_WIDTH
+
+TEXT --{
+setBlock(position, blockName)
+  notifyNeighbors = true
+setBlock(x, y, z, blockName)
+  notifyNeighbors = true
+setBlock(position, blockName, notifyNeighbors)
+setBlock(x, y, z, blockName, notifyNeighbors)
+
+Sets the block at the given position.
+
+- position: The position of the block
+- x, y, z (int): The coordinates of the block
+- blockName (string): The name of the block
+- notifyNeighbors (bool): Should neighbor blocks notified about the change
+}--

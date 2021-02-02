@@ -1,0 +1,8 @@
+TITLE getCurrentSlot
+MAX_WIDTH
+
+TEXT --{
+int getCurrentSlot()
+
+Gets the id of the slot the player is currently using
+}--

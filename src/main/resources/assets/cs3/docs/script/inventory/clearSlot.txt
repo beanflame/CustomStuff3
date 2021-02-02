@@ -1,0 +1,10 @@
+TITLE clearSlot
+MAX_WIDTH
+
+TEXT --{
+clearSlot(slotId)
+
+Clears the slot with the given id.
+
+- slotId (int): The id of the slot
+}--

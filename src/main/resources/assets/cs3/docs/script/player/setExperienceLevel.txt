@@ -1,0 +1,10 @@
+TITLE setExperienceLevel
+MAX_WIDTH
+
+TEXT --{
+setExperienceLevel(amount)
+
+Sets the level of the player
+
+- amount (int): The level to set the player to
+}--

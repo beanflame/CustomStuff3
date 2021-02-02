@@ -1,0 +1,5 @@
+TITLE slotId
+
+TEXT --{
+This is an integer that holds the id of an inventory slot.
+}--

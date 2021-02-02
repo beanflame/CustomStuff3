@@ -1,0 +1,10 @@
+TITLE getIntData
+MAX_WIDTH
+
+TEXT --{
+int getIntData(name)
+
+Returns the data with the given name or -1 if it doesn't exist.
+
+- name (string): The name of the data.
+}--

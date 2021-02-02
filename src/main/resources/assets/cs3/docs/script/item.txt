@@ -1,0 +1,13 @@
+TITLE item
+TYPE list
+SORTED
+
+ELEM_PREFIX script/item/
+
+ELEM getItemName getItemName
+ELEM getItemDamageValue getItemDamageValue
+ELEM getItemStackSize getItemStackSize
+
+ELEM_PREFIX script/
+
+ELEM "Everything from entity" entity

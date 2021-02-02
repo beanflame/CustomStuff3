@@ -1,0 +1,8 @@
+TITLE getExperience
+MAX_WIDTH
+
+TEXT --{
+int getExperience()
+
+Returns the XP of the player.
+}--

@@ -1,0 +1,11 @@
+TITLE getFloatData
+MAX_WIDTH
+
+TEXT --{
+float getFloatData(slotId, name)
+
+Returns the data with the given name or -1.0 if it doesn't exist.
+
+- slotId (int): The id of the slot
+- name (string): The name of the data.
+}--

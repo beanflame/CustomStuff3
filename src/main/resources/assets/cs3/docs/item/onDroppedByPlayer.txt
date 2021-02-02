@@ -1,0 +1,6 @@
+TEXT --{
+This script is executed when the item is dropped by the player.
+
+Available objects:
+}--
+SCRIPT_OBJECTS onDroppedByPlayer ITEM

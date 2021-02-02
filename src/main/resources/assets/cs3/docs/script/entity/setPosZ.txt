@@ -1,0 +1,10 @@
+TITLE setPosZ
+MAX_WIDTH
+
+TEXT --{
+setPosZ(z)
+
+Sets the z-position of the entity
+
+- z (float): The new z-position
+}--

@@ -1,0 +1,10 @@
+TITLE setFallDistance
+MAX_WIDTH
+
+TEXT --{
+setFallDistance(distance)
+
+Sets the amount of blocks that the entity has already been fallen for.
+
+- distance (float): The new distance
+}--

@@ -1,0 +1,27 @@
+TITLE itemstack
+TYPE list
+SORTED
+
+ELEM_PREFIX script/itemstack/
+
+ELEM setValues setValues
+ELEM setItem setItem
+ELEM getItemName getItemName
+ELEM setDamage setDamage
+ELEM getDamage getDamage
+ELEM setStackSize setStackSize
+ELEM getStackSize getStackSize
+ELEM getMaxStackSize getMaxStackSize
+ELEM damageItem damageItem
+ELEM hasEnchantment hasEnchantment
+ELEM clearEnchantments clearEnchantments
+ELEM addEnchantment addEnchantment
+ELEM removeEnchantment removeEnchantment
+ELEM getIntData getIntData
+ELEM getFloatData getFloatData
+ELEM getStringData getStringData
+ELEM setIntData setIntData
+ELEM setFloatData setFloatData
+ELEM setStringData setStringData
+ELEM canEfficientlyBreak canEfficientlyBreak
+ELEM canHarvest canHarvest

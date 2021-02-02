@@ -1,0 +1,12 @@
+TITLE addToSlot
+MAX_WIDTH
+
+TEXT --{
+int addToSlot(slotId, amount)
+
+Adds the given number of items to the slot. If the slot is empty, this does nothing.
+Returns the number of items added to the slot.
+
+- slotId (int): The id of the slot
+- amount (int): The number of items to add
+}--

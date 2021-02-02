@@ -1,0 +1,14 @@
+TITLE countEntities
+MAX_WIDTH
+
+TEXT --{
+int countEntities(position, radius, entities)
+int countEntities(x, y, z, radius, entities)
+
+Returns the number of matching entities in the given radius.
+
+- position: The position of the block
+- x, y, z (int): The coordinates of the block
+- radius (float): The radius to look for entities
+- entities (string): The entities to search for. Allowed values are 'hostile', 'animal', 'mob', 'player', 'item', 'all', any entityID and any entity name. You can give multiple values by dividing them with a ','
+}--

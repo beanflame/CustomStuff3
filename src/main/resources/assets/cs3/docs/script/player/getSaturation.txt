@@ -1,0 +1,8 @@
+TITLE getSaturation
+MAX_WIDTH
+
+TEXT --{
+float getSaturation()
+
+Returns the saturation of the player.
+}--

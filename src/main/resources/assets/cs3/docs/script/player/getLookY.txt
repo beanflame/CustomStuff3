@@ -1,0 +1,8 @@
+TITLE getLookY
+MAX_WIDTH
+
+TEXT --{
+int getLookY()
+
+Returns the y-coordinate of the block that the player is looking at.
+}--

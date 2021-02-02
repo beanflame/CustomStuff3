@@ -1,0 +1,11 @@
+TITLE isItemEqual
+MAX_WIDTH
+
+TEXT --{
+isItemEqual(slot1, slot2)
+
+Returns true if the items in both slots are equal.
+
+- slot1 (int): The id of the first slot
+- slot2 (int): The id of the second slot
+}--

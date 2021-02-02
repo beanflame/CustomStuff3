@@ -1,0 +1,6 @@
+TEXT --{
+This script is executed when the block gets removed from the world.
+
+Available objects:
+}--
+SCRIPT_OBJECTS onBreak BLOCK

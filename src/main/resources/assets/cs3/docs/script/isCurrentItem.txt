@@ -1,0 +1,5 @@
+TITLE isCurrentItem
+
+TEXT --{
+This is a boolean that is true if the itemstack is the one that the player is holding at the moment and false if not.
+}--

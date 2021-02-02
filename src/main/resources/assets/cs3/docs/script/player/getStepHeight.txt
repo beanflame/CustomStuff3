@@ -1,0 +1,8 @@
+TITLE getStepHeight
+MAX_WIDTH
+
+TEXT --{
+float getStepHeight()
+
+Returns the step height of the player.
+}--

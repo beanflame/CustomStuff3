@@ -1,0 +1,12 @@
+TITLE setValues
+MAX_WIDTH
+
+TEXT --{
+setValues(itemName, stackSize, damageValue)
+
+Sets the stacks item, damage value and stack size
+
+- itemName (string): The name of the item
+- stackSize (int): The new stack size
+- damageValue (int): The new damage value
+}--

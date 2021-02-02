@@ -1,0 +1,8 @@
+TITLE getFallDistance
+MAX_WIDTH
+
+TEXT --{
+float getFallDistance()
+
+Returns the amount of blocks that the entity has already been fallen for.
+}--

@@ -1,0 +1,6 @@
+TEXT --{
+This script is executed when an entity collides with the block. An entity can't collide with a normal block except when the block has no collision.
+
+Available objects:
+}--
+SCRIPT_OBJECTS onCollided BLOCK

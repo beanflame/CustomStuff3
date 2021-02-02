@@ -1,0 +1,12 @@
+TITLE addPotionEffect
+MAX_WIDTH
+
+TEXT --{
+addPotionEffect(type, duration, amplifier)
+
+Adds a potion effect to the living
+
+- type (string): The potion type
+- duration (int): The duration in ticks (1/20 second)
+- amplifier (int): The amplifier
+}--

@@ -1,0 +1,8 @@
+TITLE clearEnchantments
+MAX_WIDTH
+
+TEXT --{
+clearEnchantments()
+
+Removes all enchantments from the stack.
+}--

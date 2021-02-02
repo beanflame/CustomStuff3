@@ -1,0 +1,12 @@
+TITLE side
+
+TEXT --{
+This is an integer that holds a side (mostly the side clicked on a block).
+
+0 = negative y (down)
+1 = positive y (up)
+2 = negative z (north)
+3 = positive z (south)
+4 = negative x (west)
+5 = positive x (east)
+}--

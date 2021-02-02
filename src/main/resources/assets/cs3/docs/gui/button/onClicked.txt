@@ -1,0 +1,9 @@
+TITLE onClicked
+
+TEXT --{
+This script is executed when the button is pressed.
+
+Available objects:
+}--
+
+SCRIPT_OBJECTS button/onClicked GUI

@@ -1,0 +1,6 @@
+TEXT --{
+This script is executed when an entity is hit by the item. It is called after the damage is applied to the entity.
+
+Available objects:
+}--
+SCRIPT_OBJECTS onHitEntity ITEM

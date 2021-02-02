@@ -1,0 +1,9 @@
+TITLE growSheepWool
+MAX_WIDTH
+
+TEXT --{
+bool growSheepWool()
+
+Grows the wool of a sheep
+Returns true if the wool has been grown.
+}--

@@ -1,0 +1,6 @@
+TEXT --{
+This script is executed every tick if the item is in the player's inventory.
+
+Available objects:
+}--
+SCRIPT_OBJECTS onUpdate ITEM

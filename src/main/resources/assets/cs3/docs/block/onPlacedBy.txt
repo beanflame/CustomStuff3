@@ -1,0 +1,6 @@
+TEXT --{
+This script is executed when a living places the block.
+
+Available objects:
+}--
+SCRIPT_OBJECTS onPlacedBy BLOCK

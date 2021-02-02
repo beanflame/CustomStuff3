@@ -1,0 +1,10 @@
+TITLE sendChat
+MAX_WIDTH
+
+TEXT --{
+sendChat(chat)
+
+Makes the player send a chat message as if the message was sent with the chat console. Commands will work this way.
+
+- chat (string): The chat message
+}--

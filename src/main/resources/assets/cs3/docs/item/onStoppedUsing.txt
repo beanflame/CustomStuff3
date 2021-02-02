@@ -1,0 +1,6 @@
+TEXT --{
+This script is executed when the player stopped using the item (releases the right mouse button).For example when the player stopped blocking with a sword.
+
+Available objects:
+}--
+SCRIPT_OBJECTS onStoppedUsing ITEM

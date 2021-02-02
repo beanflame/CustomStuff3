@@ -1,0 +1,10 @@
+TITLE setItem
+MAX_WIDTH
+
+TEXT --{
+setItem(itemName)
+
+Sets the stacks item
+
+- itemName (string): The name of the item
+}--

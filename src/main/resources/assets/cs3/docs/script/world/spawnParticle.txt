@@ -1,0 +1,14 @@
+TITLE spawnParticle
+MAX_WIDTH
+
+TEXT --{
+string spawnParticle(name, position, velX, velY, velZ)
+string spawnParticle(name, x, y, z, velX, velY, velZ)
+
+Spawns a particle at the given position and the given velocity.
+
+- position: The position of the particle
+- x, y, z (int): The coordinates of the particle
+- name (string): One of: bubble, suspended, depthsuspend, townaura, crit, magicCrit, smoke, mobSpell, mobSpellAmbient, spell, instantSpell, witchMagic, note, portal, enchantmenttable, explode, flame, lava, footstep, splash, wake, largesmoke, cloud, reddust, snowballpoof, dripWater, dripLava, snowshovel, slime, heart, angryVillager, happyVillager
+- velX, velY, velZ (float): The initial velocity of the particle
+}--

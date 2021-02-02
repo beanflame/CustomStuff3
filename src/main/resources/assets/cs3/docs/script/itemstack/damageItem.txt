@@ -1,0 +1,10 @@
+TITLE damageItem
+MAX_WIDTH
+
+TEXT --{
+damageItem(amount)
+
+Damages the item.
+
+- amount (int): The damage to add to the stack
+}--

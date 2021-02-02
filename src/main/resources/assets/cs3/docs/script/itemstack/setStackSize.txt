@@ -1,0 +1,10 @@
+TITLE setStackSize
+MAX_WIDTH
+
+TEXT --{
+setStackSize(stackSize)
+
+Sets the stacks stack size
+
+- stackSize (int): The new stack size
+}--

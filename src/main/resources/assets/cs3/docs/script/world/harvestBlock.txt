@@ -1,0 +1,12 @@
+TITLE harvestBlock
+MAX_WIDTH
+
+TEXT --{
+harvestBlock(position)
+harvestBlock(x, y, z)
+
+Harvests the block at the given position as if was destroyed by a player.
+
+- position: The position of the block
+- x, y, z (int): The coordinates of the block
+}--

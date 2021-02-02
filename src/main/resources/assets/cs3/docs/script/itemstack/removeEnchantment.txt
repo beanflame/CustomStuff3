@@ -1,0 +1,10 @@
+TITLE removeEnchantment
+MAX_WIDTH
+
+TEXT --{
+removeEnchantment(id)
+
+Removes an enchantment from the stack
+
+- id (int): The id of the enchantment
+}--

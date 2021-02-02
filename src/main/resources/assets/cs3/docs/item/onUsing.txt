@@ -1,0 +1,6 @@
+TEXT --{
+This script is executed every tick if the item is in use (e.g. when a sword is blocking).
+
+Available objects:
+}--
+SCRIPT_OBJECTS onUsing ITEM

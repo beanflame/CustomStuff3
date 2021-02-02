@@ -1,0 +1,14 @@
+TITLE setTileEntityFloatData
+MAX_WIDTH
+
+TEXT --{
+setTileEntityFloatData(position, name, data)
+setTileEntityFloatData(x, y, z, name, data)
+
+Sets the float data with the given name.
+
+- position: The position of the tile entity
+- x, y, z (int): The coordinates of the tile entity
+- name (string): The name of the data
+- data (float): The data to set
+}--

@@ -1,0 +1,10 @@
+TITLE setStepHeight
+MAX_WIDTH
+
+TEXT --{
+setStepHeight(stepHeight)
+
+Sets how high this entity can step up when running into a block to try to get over it.
+
+- stepHeight (float): The new step height
+}--

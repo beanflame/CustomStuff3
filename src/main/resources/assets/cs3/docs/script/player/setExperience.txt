@@ -1,0 +1,10 @@
+TITLE setExperience
+MAX_WIDTH
+
+TEXT --{
+setExperience(amount)
+
+Sets XP of the player
+
+- amount (int): The amount of XP
+}--

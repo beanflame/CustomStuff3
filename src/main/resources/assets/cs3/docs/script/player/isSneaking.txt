@@ -1,0 +1,8 @@
+TITLE isSneaking
+MAX_WIDTH
+
+TEXT --{
+bool isSneaking()
+
+Returns true if the player is sneaking.
+}--

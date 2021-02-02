@@ -1,0 +1,8 @@
+TITLE getVelocityY
+MAX_WIDTH
+
+TEXT --{
+float getVelocityY()
+
+Returns the velocity in y-direction
+}--

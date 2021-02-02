@@ -1,0 +1,6 @@
+TEXT --{
+This script is executed right before the item breaks a block.
+
+Available objects:
+}--
+SCRIPT_OBJECTS onBlockStartBreak ITEM

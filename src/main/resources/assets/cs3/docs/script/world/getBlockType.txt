@@ -1,0 +1,12 @@
+TITLE getBlockType
+MAX_WIDTH
+
+TEXT --{
+string getBlockType(position)
+string getBlockType(x, y, z)
+
+Gets the type of the block with the given id. This works for all Custom Stuff blocks and for vanilla buttons, carpets, chests, doors, fences, fence gates, fluids, furnaces, ladders, panes, pressure plates, slabs, torches, trap doors and walls. It may work some blocks from other mods.
+
+- position: The position of the block
+- x, y, z (int): The coordinates of the block
+}--

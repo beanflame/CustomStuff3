@@ -1,0 +1,20 @@
+TITLE Getting Started
+
+TEXT --{
+The first thing you have to do is creating a content pack. A content pack is a container for all the things you \
+may create. You can create as many as you like, for example to have things separated.
+The pack won't appear in the list until you restart the game!
+The name of the pack can be chosen freely but the ID must not contain any spaces and has to be unique among other packs \
+and mods.
+
+If you choose "tutorial" as the packs ID or if there is only one pack, links will bring you to the correct screen using that pack.
+}--
+
+BUTTON "Create Pack" ::newPack
+
+TEXT --{
+
+If you open the pack, you'll see a list with all things you can create. Clicking any of these will bring you to a list \
+that contains all creations of said type. You can add, remove and most of the time also edit them.
+Most things don't require a restart of the game to appear (and disappear). Exceptions are, for example, blocks and items.
+}--

@@ -1,0 +1,12 @@
+TITLE getBlockName
+MAX_WIDTH
+
+TEXT --{
+string getBlockName(position)
+string getBlockName(x, y, z)
+
+Gets the name of the block. Returns "minecraft:air" if there is no block.
+
+- position: The position of the block
+- x, y, z (int): The coordinates of the block
+}--

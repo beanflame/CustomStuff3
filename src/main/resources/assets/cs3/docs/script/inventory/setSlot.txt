@@ -1,0 +1,14 @@
+TITLE setSlot
+MAX_WIDTH
+
+TEXT --{
+int setSlot(slotId, itemName, damageValue, stackSize)
+
+Sets the content of the slot with the given id.
+Returns the given stackSize if the slot's content doesn't match with the item or the amount added or removed if the slot's content matches with the item
+
+- slotId (int): The id of the slot
+- itemName (string): The name of the item
+- damageValue (int): The damage value of the item
+- stackSize (int): The stack size of the item
+}--

@@ -1,0 +1,8 @@
+TITLE getName
+MAX_WIDTH
+
+TEXT --{
+string getName()
+
+Returns the name of the entity (Creeper, Sheep, ...).
+}--

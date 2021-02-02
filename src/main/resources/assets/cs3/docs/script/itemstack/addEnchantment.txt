@@ -1,0 +1,11 @@
+TITLE addEnchantment
+MAX_WIDTH
+
+TEXT --{
+addEnchantment(id, level)
+
+Adds the given enchantment to the stack.
+
+- id (int): The id of the enchantment
+- level (int): The level of the enchantment
+}--

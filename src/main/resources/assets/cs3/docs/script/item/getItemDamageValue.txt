@@ -1,0 +1,8 @@
+TITLE getItemDamageValue
+MAX_WIDTH
+
+TEXT --{
+int getItemDamageValue()
+
+Returns the damage value of the item.
+}--

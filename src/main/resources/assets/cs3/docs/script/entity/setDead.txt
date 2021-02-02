@@ -1,0 +1,8 @@
+TITLE setDead
+MAX_WIDTH
+
+TEXT --{
+setDead()
+
+Instantly removes the entity from the world.
+}--

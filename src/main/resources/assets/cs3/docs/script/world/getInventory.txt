@@ -1,0 +1,13 @@
+TITLE getInventory
+MAX_WIDTH
+
+TEXT --{
+inventory getInventory(position)
+inventory getInventory(x, y, z)
+
+Gets the inventory of a block.
+Returns the inventory or null if there wasn't any
+
+- position: The position of the block
+- x, y, z (int): The coordinates of the block
+}--

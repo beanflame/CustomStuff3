@@ -1,0 +1,11 @@
+TITLE setIntData
+MAX_WIDTH
+
+TEXT --{
+setIntData(name, data)
+
+Sets the int data with the given name.
+
+- name (string): The name of the data.
+- data (int): The data to use.
+}--

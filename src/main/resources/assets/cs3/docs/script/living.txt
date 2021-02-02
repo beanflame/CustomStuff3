@@ -1,0 +1,18 @@
+TITLE living
+TYPE list
+SORTED
+
+ELEM_PREFIX script/living/
+
+ELEM getMaxHealth getMaxHealth
+ELEM setHealth setHealth
+ELEM attack attack
+ELEM getHealth getHealth
+ELEM getLookingSide getLookingSide
+ELEM colorSheep colorSheep
+ELEM growSheepWool growSheepWool
+ELEM addPotionEffect addPotionEffect
+
+ELEM_PREFIX script/
+
+ELEM "Everything from entity" entity TRUE

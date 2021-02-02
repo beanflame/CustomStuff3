@@ -1,0 +1,8 @@
+TITLE setItemInUse
+MAX_WIDTH
+
+TEXT --{
+setItemInUse()
+
+Sets the current item in use, so onUsing is called.
+}--

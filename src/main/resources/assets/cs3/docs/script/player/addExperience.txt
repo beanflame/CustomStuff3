@@ -1,0 +1,10 @@
+TITLE addExperience
+MAX_WIDTH
+
+TEXT --{
+addExperience(amount)
+
+Adds XP to the player
+
+- amount (int): The amount of XP to add
+}--

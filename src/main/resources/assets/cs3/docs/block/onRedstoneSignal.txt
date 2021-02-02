@@ -1,0 +1,6 @@
+TEXT --{
+This script is executed when the block gets added and when a neighbor block changes. It can be used to handle redstone signals.
+
+Available objects:
+}--
+SCRIPT_OBJECTS onRedstoneSignal BLOCK

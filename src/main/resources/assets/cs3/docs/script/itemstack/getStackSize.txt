@@ -1,0 +1,8 @@
+TITLE getStackSize
+MAX_WIDTH
+
+TEXT --{
+int getStackSize()
+
+Returns the stack size of the stack.
+}--

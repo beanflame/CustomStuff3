@@ -1,0 +1,11 @@
+TITLE damageItem
+MAX_WIDTH
+
+TEXT --{
+damageItem(slotId, amount)
+
+Damages the item in the slot with the given id. If the slot is empty or the item in the slot isn't damageable, this does nothing.
+
+- slotId (int): The id of the slot
+- amount (int): The amount of damage to add
+}--

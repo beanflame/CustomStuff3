@@ -1,0 +1,10 @@
+TITLE setTime
+MAX_WIDTH
+
+TEXT --{
+setTime(time)
+
+Sets the time of the world.
+
+- time (long): The time to set the world to.
+}--

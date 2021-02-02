@@ -1,0 +1,10 @@
+TITLE setHunger
+MAX_WIDTH
+
+TEXT --{
+setHunger(hunger)
+
+Set the hunger of the player.
+
+- hunger (int): The new hunger
+}--

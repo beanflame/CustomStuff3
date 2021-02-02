@@ -1,0 +1,8 @@
+TITLE asPlayer
+MAX_WIDTH
+
+TEXT --{
+player asPlayer()
+
+Returns the entity as a player.
+}--

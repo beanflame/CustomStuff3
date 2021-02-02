@@ -1,0 +1,11 @@
+TITLE removeEnchantment
+MAX_WIDTH
+
+TEXT --{
+removeEnchantment(slotId, id)
+
+Removes an enchantment from the stack in the slot.
+
+- slotId (int): The id of the slot
+- id (int): The id of the enchantment
+}--

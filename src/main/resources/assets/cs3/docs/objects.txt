@@ -1,0 +1,17 @@
+TITLE CS3 JavaScript Objects
+
+BUTTON entity script/entity
+BUTTON hitX script/hitX
+BUTTON hitY script/hitY
+BUTTON inventory script/inventory
+BUTTON isCurrentItem script/isCurrentItem
+BUTTON item script/item
+BUTTON itemstack script/itemstack
+BUTTON living script/living
+BUTTON player script/player
+BUTTON position script/position
+BUTTON redstoneSignal script/redstoneSignal
+BUTTON side script/side
+BUTTON slotId script/slotId
+BUTTON tickCount script/tickCount
+BUTTON world script/world

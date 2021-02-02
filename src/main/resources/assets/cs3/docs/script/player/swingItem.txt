@@ -1,0 +1,8 @@
+TITLE swingItem
+MAX_WIDTH
+
+TEXT --{
+swingItem()
+
+Swings the item the player is holding.
+}--

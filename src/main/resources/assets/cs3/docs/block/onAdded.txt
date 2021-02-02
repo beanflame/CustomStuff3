@@ -1,0 +1,6 @@
+TEXT --{
+This script is executed when the block gets added (no matter how) to the world.
+
+Available objects:
+}--
+SCRIPT_OBJECTS onAdded BLOCK

@@ -1,0 +1,8 @@
+TITLE getUsername
+MAX_WIDTH
+
+TEXT --{
+string getUsername()
+
+Returns the username of the player.
+}--

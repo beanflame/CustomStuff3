@@ -1,0 +1,14 @@
+TITLE move
+MAX_WIDTH
+
+TEXT --{
+move(x, y, z)
+move(position)
+
+Adds the given position to the position of the entity
+
+- x (float): The x-position to add
+- y (float): The y-position to add
+- z (float): The z-position to add
+- position: The new position to add
+}--

@@ -1,0 +1,11 @@
+TITLE getItemCount
+MAX_WIDTH
+
+TEXT --{
+int getItemCount(itemName, damageValue)
+
+Returns the number of matching items in the inventory.
+
+- itemName (string): The name of the item
+- damageValue (int): The damage value of the item
+}--

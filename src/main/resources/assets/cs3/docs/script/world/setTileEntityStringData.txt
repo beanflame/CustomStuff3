@@ -1,0 +1,14 @@
+TITLE setTileEntityStringData
+MAX_WIDTH
+
+TEXT --{
+setTileEntityStringData(position, name, data)
+setTileEntityStringData(x, y, z, name, data)
+
+Sets the string data with the given name.
+
+- position: The position of the tile entity
+- x, y, z (int): The coordinates of the tile entity
+- name (string): The name of the data
+- data (string): The data to set
+}--

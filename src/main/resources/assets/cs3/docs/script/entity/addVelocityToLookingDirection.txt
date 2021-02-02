@@ -1,0 +1,10 @@
+TITLE addVelocityToLookingDirection
+MAX_WIDTH
+
+TEXT --{
+addVelocityToLookingDirection(velocity)
+
+Adds velocity to the entity into the direction it looks
+
+- velocity (float): The velocity to add
+}--

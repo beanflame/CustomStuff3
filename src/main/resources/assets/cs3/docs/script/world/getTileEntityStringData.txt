@@ -1,0 +1,13 @@
+TITLE getTileEntityStringData
+MAX_WIDTH
+
+TEXT --{
+string getTileEntityStringData(position, name)
+string getTileEntityStringData(x, y, z, name)
+
+Gets the string data with the given name. Returns null if the data doesn't exist.
+
+- position: The position of the tile entity
+- x, y, z (int): The coordinates of the tile entity
+- name (string): The name of the data
+}--

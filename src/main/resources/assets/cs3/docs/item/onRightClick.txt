@@ -1,0 +1,6 @@
+TEXT --{
+This script is executed when the player right clicks with the item.
+
+Available objects:
+}--
+SCRIPT_OBJECTS onRightClick ITEM

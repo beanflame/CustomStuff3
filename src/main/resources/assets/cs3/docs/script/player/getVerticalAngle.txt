@@ -1,0 +1,8 @@
+TITLE getVerticalAngle
+MAX_WIDTH
+
+TEXT --{
+int getVerticalAngle()
+
+Returns the vertical look angle of the player
+}--

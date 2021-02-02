@@ -1,0 +1,8 @@
+TITLE isThundering
+MAX_WIDTH
+
+TEXT --{
+bool isThundering()
+
+Returns true if it is thundering, false otherwise.
+}--

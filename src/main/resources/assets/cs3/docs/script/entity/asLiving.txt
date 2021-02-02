@@ -1,0 +1,8 @@
+TITLE asLiving
+MAX_WIDTH
+
+TEXT --{
+living asLiving()
+
+Returns the entity as a living.
+}--

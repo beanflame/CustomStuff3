@@ -1,0 +1,11 @@
+TITLE setStringData
+MAX_WIDTH
+
+TEXT --{
+setStringData(name, data)
+
+Sets the string data with the given name.
+
+- name (string): The name of the data.
+- data (string): The data to use.
+}--

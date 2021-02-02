@@ -1,0 +1,5 @@
+TITLE tickCount
+
+TEXT --{
+This is an integer >= 0 that holds an amount of ticks.
+}--

@@ -1,0 +1,6 @@
+TEXT --{
+This script is executed randomly only on the client if you're within a 16 block radius. Only use this for particles or other client only stuff.
+
+Available objects:
+}--
+SCRIPT_OBJECTS onRandomDisplayTick BLOCK

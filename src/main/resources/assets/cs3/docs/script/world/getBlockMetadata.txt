@@ -1,0 +1,12 @@
+TITLE getBlockMetadata
+MAX_WIDTH
+
+TEXT --{
+int getBlockMetadata(position)
+int getBlockMetadata(x, y, z)
+
+Gets the metadata of the block. This will be between 0 and 15 (including both).
+
+- position: The position of the block
+- x, y, z (int): The coordinates of the block
+}--

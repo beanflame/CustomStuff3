@@ -1,0 +1,6 @@
+TEXT --{
+This script is executed when the block gets placed.
+
+Available objects:
+}--
+SCRIPT_OBJECTS onPlaced BLOCK

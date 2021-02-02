@@ -1,0 +1,14 @@
+TITLE setPosition
+MAX_WIDTH
+
+TEXT --{
+setPosition(x, y, z)
+setPosition(position)
+
+Sets the position of the entity
+
+- x (float): The new x-position
+- y (float): The new y-position
+- z (float): The new z-position
+- position: The new position
+}--

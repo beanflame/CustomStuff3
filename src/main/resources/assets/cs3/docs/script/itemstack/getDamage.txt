@@ -1,0 +1,8 @@
+TITLE getDamage
+MAX_WIDTH
+
+TEXT --{
+int getDamage()
+
+Returns the damage value of the stack.
+}--

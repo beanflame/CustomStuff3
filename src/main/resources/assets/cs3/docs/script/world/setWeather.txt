@@ -1,0 +1,11 @@
+TITLE setWeather
+MAX_WIDTH
+
+TEXT --{
+setWeather(weather, duration)
+
+Sets the weather in the world
+
+- weather (string): One of "sun", "rain" or "thundering"
+- duration (int): The duration of the rain or thundering weather in ticks (1/20 second)
+}--

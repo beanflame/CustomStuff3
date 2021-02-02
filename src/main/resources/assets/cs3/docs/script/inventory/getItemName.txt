@@ -1,0 +1,10 @@
+TITLE getItemName
+MAX_WIDTH
+
+TEXT --{
+string getItemName(slotId)
+
+Returns the name of the item in the slot or null if the slot is empty.
+
+- slotId (int): The id of the slot
+}--

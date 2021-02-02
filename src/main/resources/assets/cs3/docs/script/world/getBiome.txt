@@ -1,0 +1,12 @@
+TITLE getBiome
+MAX_WIDTH
+
+TEXT --{
+string getBiome(position)
+string getBiome(x, y, z)
+
+Gets the biome at the given position.
+
+- position: The position of the block
+- x, y, z (int): The coordinates of the block
+}--

@@ -1,0 +1,8 @@
+TITLE extinguish
+MAX_WIDTH
+
+TEXT --{
+extinguish()
+
+Removes fire from the entity
+}--

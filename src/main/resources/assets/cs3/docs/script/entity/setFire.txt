@@ -1,0 +1,10 @@
+TITLE setFire
+MAX_WIDTH
+
+TEXT --{
+setFire(duration)
+
+Sets the entity on fire
+
+- duration (int): The duration in seconds
+}--

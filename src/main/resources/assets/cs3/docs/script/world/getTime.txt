@@ -1,0 +1,8 @@
+TITLE getTime
+MAX_WIDTH
+
+TEXT --{
+long getTime()
+
+Gets the worlds time.
+}--

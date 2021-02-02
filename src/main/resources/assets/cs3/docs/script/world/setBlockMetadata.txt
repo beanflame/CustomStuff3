@@ -1,0 +1,14 @@
+TITLE setBlockMetadata
+MAX_WIDTH
+
+TEXT --{
+setBlockMetadata(position, metadata)
+setBlockMetadata(x, y, z, metadata)
+
+Sets the metadata of a block.
+
+- position: The position of the block
+- x, y, z (int): The coordinates of the block
+- blockName (string): The name of the block
+- metadata (int): The new metadata. This has to be between 0 and 15 (including both)
+}--

@@ -1,0 +1,14 @@
+TITLE createExplosion
+MAX_WIDTH
+
+TEXT --{
+createExplosion(position, strength, flaming)
+createExplosion(x, y, z, strength, flaming)
+
+Creates an explosion.
+
+- position: The position of the explosion
+- x, y, z (float): The coordinates of the explosion
+- strength (float): The strength of the explosion (TNT is 4.0)
+- flaming (bool): True for flaming explosions
+}--

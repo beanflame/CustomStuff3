@@ -1,0 +1,10 @@
+TITLE openGui
+MAX_WIDTH
+
+TEXT --{
+openGui(guiName)
+
+Opens a client-only gui for the player
+
+- guiName (string): The name of the gui
+}--

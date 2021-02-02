@@ -1,0 +1,13 @@
+TITLE add
+MAX_WIDTH
+
+TEXT --{
+int add(itemName, damageValue, amount)
+
+Tries to add the given number of items to the inventory
+Returns the number of items added.
+
+- itemName (string): The name of the item
+- damageValue (string): The damage value of the item
+- amount (int): The number of items to add
+}--

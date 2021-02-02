@@ -1,0 +1,8 @@
+TITLE getMaxHealth
+MAX_WIDTH
+
+TEXT --{
+float getMaxHealth()
+
+Returns the maximum health of the living.
+}--

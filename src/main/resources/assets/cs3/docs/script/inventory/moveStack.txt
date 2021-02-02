@@ -1,0 +1,11 @@
+TITLE moveStack
+MAX_WIDTH
+
+TEXT --{
+moveStack(from, to)
+
+Move as many items as possible from one slot to another.
+
+- from (int): The slot id of the source slot
+- to (int): The slot id of the destination slot
+}--

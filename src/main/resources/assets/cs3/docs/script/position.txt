@@ -1,0 +1,8 @@
+TITLE position
+
+TEXT --{
+This object holds x, y and z coordinates. You can access and change them using position.x, position.y and position.z:
+
+var myX = position.y;
+position.y = 50;
+}--

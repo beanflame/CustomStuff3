@@ -1,6 +1,6 @@
 
-// ForgeGradle - anatawa12 com.anatawa12.forge
-// LonganGradle
+// ForgeLonganGradle - anatawa12 com.anatawa12.forge
+// ForgeLonganGradle
 
 plugins {
     id "com.jfrog.bintray" version "1.8.4"
@@ -17,12 +17,14 @@ if (project.hasProperty("push_release")) {
     version = '1.2-1.0.3'
 } else {
     //version = '1.2-1.0.4-SNAPSHOT'
-    version = '1.2-0.1.0-longan'    //1.2-SNAPSHOT
+    version = '1.2-0.1.1-longan'    //1.2-SNAPSHOT
 }
 
-archivesBaseName = 'LonganGradle'    //ForgeGradle
-targetCompatibility = '1.6'
-sourceCompatibility = '1.6'
+archivesBaseName = 'ForgeLonganGradle'    //ForgeGradle ForgeLonganGradle
+targetCompatibility = '1.8'
+sourceCompatibility = '1.8'
+//targetCompatibility = '1.6'
+//sourceCompatibility = '1.6'
 
 repositories {
 
@@ -34,18 +36,17 @@ repositories {
     mavenLocal()
     maven {
         name = "forge"
-
         url = "http://lss233.littleservice.cn/repositories/forgedev"
         //http://lss233.littleservice.cn/repositories/minecraft
         //url = "http://files.minecraftforge.net/maven"
     }
     maven {
-        // because Srg2Source needs an eclipse dependency.
+        // 因为 Srg2Source需要 eclipse依赖。
         name = "eclipse"
         url = "https://repo.eclipse.org/content/groups/eclipse/"
     }
     maven {
-        // because SpecialSource doesnt have a full release
+        // 因为 Special Source 没有 完整版本
         name = "sonatype"
         url = "https://oss.sonatype.org/content/repositories/snapshots/"
     }
@@ -72,7 +73,7 @@ configurations {
 dependencies {
     compile gradleApi()
 
-    // moved to the beginning to be the overrider
+    // 移至开头成为替代项
     compile 'org.ow2.asm:asm-debug-all:5.0.3'
     compile 'com.google.guava:guava:18.0'
 
@@ -100,7 +101,7 @@ dependencies {
     // stupid maven
     deployerJars "org.apache.maven.wagon:wagon-ssh:2.2"
 
-    //Stuff used in the GradleStart classes
+    //GradleStart类中使用的东西
     compileOnly 'com.mojang:authlib:1.5.16'
     compileOnly "net.minecraft:launchwrapper:1.11"
 
@@ -230,7 +231,7 @@ if (project.hasProperty("push_release")) {
 
 bintrayUpload.dependsOn assemble
 
-// write out version so its convenient for doc deployment
+// 写出版本，以便于文档部署
 file('build').mkdirs()
 file('build/version.txt').text = version;
 

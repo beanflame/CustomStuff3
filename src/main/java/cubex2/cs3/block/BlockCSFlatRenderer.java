@@ -4,7 +4,6 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import cubex2.cs3.common.WrappedBlock;
 import cubex2.cs3.lib.RenderIds;
-import cubex2.cs3.tileentity.TileEntityCS;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderGlobal;
 import net.minecraft.util.AxisAlignedBB;
@@ -14,18 +13,17 @@ import net.minecraft.util.Vec3;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 
-import javax.vecmath.Matrix4f;
 import java.util.Random;
 
-public class BlockCSFlat extends BlockCSFacing
-{
+public class BlockCSFlatRenderer extends BlockCSFacing {
+
     protected double rotationDegree = 0;
     private RenderGlobal worldObj;
 
 
     // BlockCSFlat   BlockCSFlat      BlockCSFlatRenderer
 
-    public BlockCSFlat(WrappedBlock block)
+    public BlockCSFlatRenderer(WrappedBlock block)
     {
         super(block);
         setTickRandomly(true);
@@ -317,4 +315,11 @@ public class BlockCSFlat extends BlockCSFacing
     {
         return vec3 == null ? false : vec3.xCoord >= minX && vec3.xCoord <= maxX && vec3.yCoord >= minY && vec3.yCoord <= maxY;
     }
+
+
+
+
+
+
+
 }

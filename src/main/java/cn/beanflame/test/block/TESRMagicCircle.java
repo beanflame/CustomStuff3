@@ -127,12 +127,12 @@ public class TESRMagicCircle extends TileEntitySpecialRenderer {
 
 
 
-
-
-
-
     public IModelCustom model = AdvancedModelLoader.loadModel(new ResourceLocation(Test.MODID,
             "obj/magic_circle.obj"));
+
+
+    //public MCMB model = new MCMB();
+
 
     public ResourceLocation texture = new ResourceLocation(Test.MODID,
             "textures/blocks/magic_circle.png");
@@ -141,32 +141,62 @@ public class TESRMagicCircle extends TileEntitySpecialRenderer {
     public void renderTileEntityAt(TileEntity tileentity, double x, double y, double z, float partialTick)
     {
         bindTexture(texture);
-
         GL11.glPushMatrix();
         GL11.glEnable(GL12.GL_RESCALE_NORMAL);
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-
-        GL11.glTranslatef((float) x + 0.5F, (float) y + 0.25F, (float) z + 0.5F);
-
-        GL11.glScalef(0.5F, 0.5F, 0.5F);
+        GL11.glTranslatef((float) x + 0.5F, (float) y + 0.52F, (float) z + 0.5F);
+        //GL11.glTranslatef((float) x, (float) y , (float) z );
+        GL11.glScalef(1.0F, 1.0F, 1.0F);
         model.renderAll();
 
-        //Tessellator tessellator = Tessellator.instance;
-        //tessellator.draw();
+        Tessellator tessellator = Tessellator.instance;
 
 
+        tessellator.startDrawingQuads();
+        tessellator.setColorRGBA(255, 255, 255, 255);
 
+        float f1 = 0.0625F;
+
+
+        float f2 = (float)tileentity.getWorldObj().getTotalWorldTime() + partialTick;
+        float f3 = -f2 * 0.2F - (float) MathHelper.floor_float(-f2 * 0.1F);
+        byte b0 = 1;
+        double d3 = (double)f2 * 0.025D * (1.0D - (double)(b0 & 1) * 2.5D);
+        double d5 = (double)b0 * 0.2D;
+        double d7 = 0.5D + Math.cos(d3 + 2.356194490192345D) * d5;
+        double d9 = 0.5D + Math.sin(d3 + 2.356194490192345D) * d5;
+        double d11 = 0.5D + Math.cos(d3 + (Math.PI / 4D)) * d5;
+        double d13 = 0.5D + Math.sin(d3 + (Math.PI / 4D)) * d5;
+        double d15 = 0.5D + Math.cos(d3 + 3.9269908169872414D) * d5;
+        double d17 = 0.5D + Math.sin(d3 + 3.9269908169872414D) * d5;
+        double d19 = 0.5D + Math.cos(d3 + 5.497787143782138D) * d5;
+        double d21 = 0.5D + Math.sin(d3 + 5.497787143782138D) * d5;
+        double d23 = (double)(256.0F * f1);
+        double d25 = 0.0D;
+        double d27 = 1.0D;
+        double d28 = (double)(-1.0F + f3);
+        double d29 = (double)(256.0F * f1) * (0.5D / d5) + d28;
+
+
+        tessellator.addVertexWithUV(x + d7, y + d23, z + d9, d27, d29);
+        tessellator.addVertexWithUV(x + d7, y, z + d9, d27, d28);
+        tessellator.addVertexWithUV(x + d11, y, z + d13, d25, d28);
+        tessellator.addVertexWithUV(x + d11, y + d23, z + d13, d25, d29);
+        tessellator.addVertexWithUV(x + d19, y + d23, z + d21, d27, d29);
+        tessellator.addVertexWithUV(x + d19, y, z + d21, d27, d28);
+        tessellator.addVertexWithUV(x + d15, y, z + d17, d25, d28);
+        tessellator.addVertexWithUV(x + d15, y + d23, z + d17, d25, d29);
+        tessellator.addVertexWithUV(x + d11, y + d23, z + d13, d27, d29);
+        tessellator.addVertexWithUV(x + d11, y, z + d13, d27, d28);
+        tessellator.addVertexWithUV(x + d19, y, z + d21, d25, d28);
+        tessellator.addVertexWithUV(x + d19, y + d23, z + d21, d25, d29);
+        tessellator.addVertexWithUV(x + d15, y + d23, z + d17, d27, d29);
+        tessellator.addVertexWithUV(x + d15, y, z + d17, d27, d28);
+        tessellator.addVertexWithUV(x + d7, y, z + d9, d25, d28);
+        tessellator.addVertexWithUV(x + d7, y + d23, z + d9, d25, d29);
+        tessellator.draw();
 
         GL11.glPopMatrix();
     }
-
-
-
-    /*
-        GL11.glEnable(GL12.GL_RESCALE_NORMAL);
-        GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-        GL11.glTranslatef((float) x + 0.5F, (float) y + 0.0F, (float) z + 0.5F);
-        GL11.glScalef(0.09375F, 0.09375F, 0.09375F);
-     */
 
 }

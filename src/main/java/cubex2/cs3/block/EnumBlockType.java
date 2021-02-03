@@ -28,7 +28,8 @@ public enum EnumBlockType
     FLAT("flat", BlockCSFlat.class, FlatAttributes.class),
 
 
-    // 新的方块   renderer       渲染器    平面渲染器       flatrenderer  BlockCSFlatRenderer
+
+    // 新的方块   renderer       渲染器    平面渲染器       flatrenderer  BlockCSFlatRenderer        豆焰
     FLATRENDERER(I18n.format("gui.cs3.flatrenderer"), BlockCSFlatRenderer.class, FlatRendererAttributes.class),
 
     FLUID("fluid", BlockCSFluid.class, FluidAttributes.class, ItemCSFluid.class),

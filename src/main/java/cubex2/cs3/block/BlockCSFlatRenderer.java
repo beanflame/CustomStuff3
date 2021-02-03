@@ -15,6 +15,9 @@ import net.minecraftforge.common.util.ForgeDirection;
 
 import java.util.Random;
 
+
+// 豆焰写的
+
 public class BlockCSFlatRenderer extends BlockCSFacing {
 
     protected double rotationDegree = 0;

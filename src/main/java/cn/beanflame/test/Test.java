@@ -28,21 +28,18 @@ public class Test {
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-        // TODO
         proxy.preInit(event);
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
-        // TODO
         proxy.init(event);
     }
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
-        // TODO
         proxy.postInit(event);
     }
 

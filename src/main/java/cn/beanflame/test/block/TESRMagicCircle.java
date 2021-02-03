@@ -15,6 +15,8 @@ import org.lwjgl.opengl.GL12;
 
 public class TESRMagicCircle extends TileEntitySpecialRenderer {
 
+
+    /*
     private static final ResourceLocation field_147523_b = new ResourceLocation(
             "textures/entity/beacon_beam.png");
 
@@ -119,6 +121,7 @@ public class TESRMagicCircle extends TileEntitySpecialRenderer {
     {
         this.AC_renderTileEntityAt((TEMagicCircle)tileentity, x, y, z, partialTick);
     }
+    */
 
 
 
@@ -127,7 +130,7 @@ public class TESRMagicCircle extends TileEntitySpecialRenderer {
 
 
 
-    /*
+
     public IModelCustom model = AdvancedModelLoader.loadModel(new ResourceLocation(Test.MODID,
             "obj/magic_circle.obj"));
 
@@ -138,20 +141,26 @@ public class TESRMagicCircle extends TileEntitySpecialRenderer {
     public void renderTileEntityAt(TileEntity tileentity, double x, double y, double z, float partialTick)
     {
         bindTexture(texture);
-        GL11.glPushMatrix();
 
+        GL11.glPushMatrix();
         GL11.glEnable(GL12.GL_RESCALE_NORMAL);
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 
-        GL11.glTranslatef((float) x + 0.5F, (float) y + 0.0F, (float) z + 0.5F);
+        GL11.glTranslatef((float) x + 0.5F, (float) y + 0.25F, (float) z + 0.5F);
 
         GL11.glScalef(0.5F, 0.5F, 0.5F);
-
         model.renderAll();
+
+        //Tessellator tessellator = Tessellator.instance;
+        //tessellator.draw();
+
+
+
+
         GL11.glPopMatrix();
     }
 
-     */
+
 
     /*
         GL11.glEnable(GL12.GL_RESCALE_NORMAL);

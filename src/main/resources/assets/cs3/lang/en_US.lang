@@ -1,1 +1,3 @@
 tile.tests.magic_circle_block.name=Magic Circle
+
+gui.cs3.flatrenderer=Renderer Block

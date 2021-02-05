@@ -2,14 +2,19 @@ package cubex2.cs3.block;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import cubex2.cs3.block.attributes.FacingAttributes;
+import cubex2.cs3.block.attributes.GravityAttributes;
 import cubex2.cs3.common.WrappedBlock;
 import cubex2.cs3.lib.RenderIds;
+import cubex2.cs3.tileentity.TileEntityCS;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderGlobal;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.util.Vec3;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 
@@ -18,7 +23,9 @@ import java.util.Random;
 
 // 豆焰写的
 
-public class BlockCSRenderer extends BlockCSFacing {
+// extends BlockCSFacing
+
+public class BlockCSRenderer extends BlockCS {
 
     protected double rotationDegree = 0;
     private RenderGlobal worldObj;
@@ -90,6 +97,12 @@ public class BlockCSRenderer extends BlockCSFacing {
             {
                 this.rotationDegree -= 360.0;
             }
+
+            //信标
+
+            //Matrix4f matrix = new Matrix4f();
+            //matrix.rotY(((TileEntityCS) ).getRotation());
+            //transform = TRSRTransformation.blockCenterToCorner(new TRSRTransformation(matrix)).compose(transform);
         }
     }
 
@@ -312,11 +325,4 @@ public class BlockCSRenderer extends BlockCSFacing {
     {
         return vec3 == null ? false : vec3.xCoord >= minX && vec3.xCoord <= maxX && vec3.yCoord >= minY && vec3.yCoord <= maxY;
     }
-
-
-
-
-
-
-
 }

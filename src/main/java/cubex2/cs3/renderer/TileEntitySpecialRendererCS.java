@@ -1,7 +1,6 @@
 package cubex2.cs3.renderer;
 
-
-import cubex2.cs3.lib.ModInfo;
+import cubex2.cs3.block.attributes.FacingAttributes;
 import cubex2.cs3.tileentity.TileEntityCS;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.tileentity.TileEntity;
@@ -13,14 +12,15 @@ import org.lwjgl.opengl.GL12;
 
 // 豆焰写的
 
-
 public class TileEntitySpecialRendererCS extends TileEntitySpecialRenderer {
+
+    protected FacingAttributes container;
 
     public IModelCustom model = AdvancedModelLoader.loadModel(new ResourceLocation("cs3",
             "obj/magic_circle.obj"));
+
     public ResourceLocation texture = new ResourceLocation("cs3",
             "textures/blocks/magic_circle.png");
-
 
     public void render(TileEntityCS tile, double x, double y, double z, float partialTick) {
 
@@ -48,16 +48,14 @@ public class TileEntitySpecialRendererCS extends TileEntitySpecialRenderer {
     }
 
 
-
-
-
-
-
-
-
     @Override
     public void renderTileEntityAt(TileEntity tileentity, double x, double y, double z, float partialTick)
     {
         render((TileEntityCS) tileentity, x, y, z, partialTick);
     }
+
+
+
+
+
 }

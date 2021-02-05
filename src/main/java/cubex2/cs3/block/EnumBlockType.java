@@ -30,14 +30,17 @@ public enum EnumBlockType
 
 
     // 新的方块   renderer       渲染器    平面渲染器       flatrenderer  BlockCSFlatRenderer        豆焰
-    FLATRENDERER(I18n.format("gui.cs3.flatrenderer"),
-            BlockCSRenderer.class, BlockRendererAttributes.class),
 
+    FLATRENDERER("BlockRenderer", BlockCSRenderer.class, BlockRendererAttributes.class),
 
 
     FLUID("fluid", BlockCSFluid.class, FluidAttributes.class, ItemCSFluid.class),
     // FURNACE("furnace", BlockCSFurnace.class, BlockFurnaceAttributes.class, ItemCSBlockFacing.class),
+   
     GRAVITY("gravity", BlockCSGravity.class, GravityAttributes.class),
+
+
+
     LADDER("ladder", BlockCSLadder.class, LadderAttributes.class),
     NORMAL("normal", BlockCSNormal.class, BlockAttributes.class),
     PANE("pane", BlockCSPane.class, PaneAttributes.class),

@@ -76,7 +76,7 @@ public class ClientProxy extends CommonProxy
         RenderingRegistry.registerEntityRenderingHandler(EntityCSGravityBlock.class, new RenderCSBlockGravity());
 
 
-
+        ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCS.class, new TileEntitySpecialRendererCS());
 
 
     }
@@ -86,7 +86,7 @@ public class ClientProxy extends CommonProxy
     @Override
     public void preInitRendering()
     {
-        ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCS.class, new TileEntitySpecialRendererCS());
+
     }
 
 

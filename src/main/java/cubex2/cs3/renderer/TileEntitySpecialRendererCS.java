@@ -16,9 +16,9 @@ import org.lwjgl.opengl.GL12;
 
 public class TileEntitySpecialRendererCS extends TileEntitySpecialRenderer {
 
-    public IModelCustom model = AdvancedModelLoader.loadModel(new ResourceLocation(ModInfo.ID,
+    public IModelCustom model = AdvancedModelLoader.loadModel(new ResourceLocation("cs3",
             "obj/magic_circle.obj"));
-    public ResourceLocation texture = new ResourceLocation(ModInfo.ID,
+    public ResourceLocation texture = new ResourceLocation("cs3",
             "textures/blocks/magic_circle.png");
 
 

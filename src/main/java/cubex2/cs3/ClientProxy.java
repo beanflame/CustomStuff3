@@ -1,5 +1,6 @@
 package cubex2.cs3;
 
+
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
@@ -9,6 +10,7 @@ import cubex2.cs3.handler.KeyBindingHandler;
 import cubex2.cs3.lib.ModInfo;
 import cubex2.cs3.lib.RenderIds;
 import cubex2.cs3.renderer.*;
+import cubex2.cs3.tileentity.TileEntityCS;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.IResourcePack;
 import net.minecraft.util.ResourceLocation;
@@ -72,5 +74,20 @@ public class ClientProxy extends CommonProxy
         //RenderingRegistry.registerBlockHandler(slopeRenderer);
 
         RenderingRegistry.registerEntityRenderingHandler(EntityCSGravityBlock.class, new RenderCSBlockGravity());
+
+
+
+
+
     }
+
+    // 豆焰写的
+
+    @Override
+    public void preInitRendering()
+    {
+        ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCS.class, new TileEntitySpecialRendererCS());
+    }
+
+
 }

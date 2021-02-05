@@ -37,4 +37,13 @@ public class CommonProxy
     {
         // do nothing
     }
+
+    public void preInitRendering()
+    {
+        // do nothing
+    }
+    //preInitRendering
+
+
+    //proxy.initRendering();
 }

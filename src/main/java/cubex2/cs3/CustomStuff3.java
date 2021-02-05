@@ -44,6 +44,9 @@ public class CustomStuff3
         Directories.init(event.getModConfigurationDirectory().getParentFile());
 
         Config.init(event);
+
+
+        proxy.preInitRendering();
     }
 
     @EventHandler

@@ -1,0 +1,12 @@
+TITLE setBlockRotate
+MAX_WIDTH
+
+TEXT --{
+setBlockRotate(position, r)
+
+Sets setBlockRotate
+
+- position (int): The position
+- r (double): The BRotate
+
+}--

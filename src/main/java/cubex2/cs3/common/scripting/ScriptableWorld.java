@@ -211,7 +211,7 @@ public class ScriptableWorld
      *
      * @return The world time
      */
-    public long getTime()
+    public long gettimegetTime()
     {
         return world.getWorldTime();
     }
@@ -1008,5 +1008,46 @@ public class ScriptableWorld
             NBTHelper.setCSStringData(tile.getCompound(), name, data);
         }
     }
+
+
+
+
+
+
+
+    /*
+    TileEntity tileEntity = world.getTileEntity(x, y, z);
+        if (tileEntity != null && tileEntity instanceof TileEntityCS)
+        {
+            TileEntityCS tile = (TileEntityCS) tileEntity;
+            return NBTHelper.getCSFloatData(tile.getCompound(), name);
+        }
+     */
+
+
+
+    public void setBlockSize(ScriptablePosition position, double i)
+    {
+        TileEntity tileEntity = world.getTileEntity((int)position.x, (int) position.y, (int) position.z);
+
+        if (tileEntity != null && tileEntity instanceof TileEntityCS)
+        {
+            TileEntityCS tile = (TileEntityCS) tileEntity;
+            tile.BSize = i;
+        }
+    }
+
+
+    public void setBlockRotate(ScriptablePosition position, double r)
+    {
+        TileEntity tileEntity = world.getTileEntity((int)position.x, (int) position.y, (int) position.z);
+
+        if (tileEntity != null && tileEntity instanceof TileEntityCS)
+        {
+            TileEntityCS tile = (TileEntityCS) tileEntity;
+            tile.BRotate =r;
+        }
+    }
+
 }
 

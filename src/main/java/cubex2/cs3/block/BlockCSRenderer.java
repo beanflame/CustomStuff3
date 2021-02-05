@@ -18,7 +18,7 @@ import java.util.Random;
 
 // 豆焰写的
 
-public class BlockCSFlatRenderer extends BlockCSFacing {
+public class BlockCSRenderer extends BlockCSFacing {
 
     protected double rotationDegree = 0;
     private RenderGlobal worldObj;
@@ -26,7 +26,7 @@ public class BlockCSFlatRenderer extends BlockCSFacing {
 
     // BlockCSFlat   BlockCSFlat      BlockCSFlatRenderer
 
-    public BlockCSFlatRenderer(WrappedBlock block)
+    public BlockCSRenderer(WrappedBlock block)
     {
         super(block);
         setTickRandomly(true);
@@ -90,12 +90,6 @@ public class BlockCSFlatRenderer extends BlockCSFacing {
             {
                 this.rotationDegree -= 360.0;
             }
-
-            //信标
-
-            //Matrix4f matrix = new Matrix4f();
-            //matrix.rotY(((TileEntityCS) ).getRotation());
-            //transform = TRSRTransformation.blockCenterToCorner(new TRSRTransformation(matrix)).compose(transform);
         }
     }
 

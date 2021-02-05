@@ -15,8 +15,17 @@ import net.minecraft.network.Packet;
 import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
 
+
+
+
 public class TileEntityCS extends TileEntity
 {
+
+    // 豆焰写的
+    public double BSize;
+    public double BRotate;
+
+
     protected WrappedTileEntity wrappedTileEntity;
     protected TileEntityAttributes container;
 
@@ -44,6 +53,11 @@ public class TileEntityCS extends TileEntity
     @Override
     public void updateEntity()
     {
+
+        //this.BSize;//=1.0;
+        //this.BRotate;// = ((int)System.currentTimeMillis()%360000)/100D;
+
+
         if (container.onUpdate != null && container.onUpdate.script != null)
         {
             ITriggerData data = new TriggerData("onUpdate", TriggerType.TILE_ENTITY).setWorld(worldObj).setPosition(xCoord, yCoord, zCoord);

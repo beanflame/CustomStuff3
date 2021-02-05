@@ -1,0 +1,12 @@
+TITLE setBlockSize
+MAX_WIDTH
+
+TEXT --{
+setBlockSize(position, i)
+
+Sets setBlockSize
+
+- position (int): The position
+- i (double): The BSize
+
+}--

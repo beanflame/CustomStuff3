@@ -4,6 +4,10 @@ SORTED
 
 ELEM_PREFIX script/world/
 
+ELEM setBlockSize setBlockSize
+ELEM setBlockRotate setBlockRotate
+
+
 ELEM setBlock setBlock
 ELEM setBlockMetaData setBlockMetaData
 ELEM setBlockAndMetaData setBlockAndMetaData

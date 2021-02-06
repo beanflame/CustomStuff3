@@ -14,7 +14,6 @@ import org.lwjgl.opengl.GL12;
 
 public class TileEntitySpecialRendererCS extends TileEntitySpecialRenderer {
 
-    protected FacingAttributes container;
 
     public IModelCustom model = AdvancedModelLoader.loadModel(new ResourceLocation("cs3",
             "obj/magic_circle.obj"));
@@ -23,6 +22,9 @@ public class TileEntitySpecialRendererCS extends TileEntitySpecialRenderer {
             "textures/blocks/magic_circle.png");
 
     public void render(TileEntityCS tile, double x, double y, double z, float partialTick) {
+
+        texture = tile.BTexture;
+        model = tile.BModel;
 
         bindTexture(texture);
         GL11.glPushMatrix();

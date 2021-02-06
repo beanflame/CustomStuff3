@@ -30,7 +30,6 @@ public class BlockCSRenderer extends BlockCS {
     protected double rotationDegree = 0;
     private RenderGlobal worldObj;
 
-
     // BlockCSFlat   BlockCSFlat      BlockCSFlatRenderer
 
     public BlockCSRenderer(WrappedBlock block)
@@ -38,6 +37,13 @@ public class BlockCSRenderer extends BlockCS {
         super(block);
         setTickRandomly(true);
 
+    }
+
+
+    @Override
+    public TileEntity createTileEntity(World world, int metadata) {
+        return new TileEntityCS();
+        //return super.createTileEntity(world, metadata);
     }
 
     @Override

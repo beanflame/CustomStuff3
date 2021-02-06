@@ -9,13 +9,11 @@ buildscript {
 		    url 'https://maven.aliyun.com/repository/public/'
 		}
 
-
         //龙眼 maven
         maven {
             name = "longan"
             url 'https://longan.beanflame.cn/maven'
         }
-
 
         mavenCentral()
         maven {
@@ -30,17 +28,9 @@ buildscript {
     }
 
     dependencies {
-
-        // classpath 'net.minecraftforgelongan.gradle:ForgeLonganGradle:1.2-0.1.1-Longan'
-
-        //ForgeLonganGradle-1.2-0.1.1-longan.jar
-        // version = '1.2-1.0.4-SNAPSHOT'
-        //    version = '1.2-0.1.1-longan'    //1.2-SNAPSHOT
-
-
-        //classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT'
-        //classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-0.1.1-longan'
+        classpath 'cn.beanflame.longangradle:ForgeLonganGradle:1.2-0.1.2-Longan'
     }
+
 
 
 

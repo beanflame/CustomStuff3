@@ -14,8 +14,9 @@ import net.minecraft.network.NetworkManager;
 import net.minecraft.network.Packet;
 import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
-
-
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.client.model.AdvancedModelLoader;
+import net.minecraftforge.client.model.IModelCustom;
 
 
 public class TileEntityCS extends TileEntity
@@ -24,6 +25,12 @@ public class TileEntityCS extends TileEntity
     // 豆焰写的
     public double BSize;
     public double BRotate;
+
+    public ResourceLocation BTexture = new ResourceLocation("cs3",
+            "textures/blocks/magic_circle.png");
+
+    public IModelCustom BModel = AdvancedModelLoader.loadModel(new ResourceLocation("cs3",
+            "obj/magic_circle.obj"));
 
 
     protected WrappedTileEntity wrappedTileEntity;
@@ -39,6 +46,7 @@ public class TileEntityCS extends TileEntity
 
     public TileEntityCS()
     {
+
     }
 
     public NBTTagCompound getCompound()

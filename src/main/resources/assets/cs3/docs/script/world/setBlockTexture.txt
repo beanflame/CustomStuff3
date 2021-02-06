@@ -1,0 +1,15 @@
+TITLE setBlockTexture
+
+
+MAX_WIDTH
+
+TEXT --{
+setBlockTexture(position, id, texture)
+
+Sets setBlockTexture
+
+- position (int): The position
+- id (String): The MODID
+- texture (String): The Block Texture png
+
+}--

@@ -2,48 +2,34 @@ package cubex2.cs3.block;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import cubex2.cs3.block.attributes.FacingAttributes;
-import cubex2.cs3.block.attributes.GravityAttributes;
 import cubex2.cs3.common.WrappedBlock;
 import cubex2.cs3.lib.RenderIds;
 import cubex2.cs3.tileentity.TileEntityCS;
 import net.minecraft.block.Block;
+import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.client.renderer.RenderGlobal;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.util.IIcon;
-import net.minecraft.util.MovingObjectPosition;
-import net.minecraft.util.Vec3;
+import net.minecraft.util.*;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
+import net.minecraftforge.fluids.FluidRegistry;
 
+import javax.vecmath.Matrix4f;
 import java.util.Random;
 
-
-// 豆焰写的
-
-// extends BlockCSFacing
-
-public class BlockCSRenderer extends BlockCS {
-
+public class BlockCSRenderer extends BlockCSFacing
+{
     protected double rotationDegree = 0;
     private RenderGlobal worldObj;
-
-    // BlockCSFlat   BlockCSFlat      BlockCSFlatRenderer
+    private IIcon Texture;
 
     public BlockCSRenderer(WrappedBlock block)
     {
         super(block);
         setTickRandomly(true);
 
-    }
-
-
-    @Override
-    public TileEntity createTileEntity(World world, int metadata) {
-        return new TileEntityCS();
-        //return super.createTileEntity(world, metadata);
     }
 
     @Override
@@ -57,6 +43,39 @@ public class BlockCSRenderer extends BlockCS {
     {
         return wrappedBlock.getIcon(0, meta);
     }
+
+
+    @SideOnly(Side.CLIENT)
+    public void registerBlockIcons(IIconRegister iconRegister)
+    {
+        super.registerBlockIcons(iconRegister);
+        this.Texture = iconRegister.registerIcon(this.getTextureName());
+    }
+
+
+    @Override
+    public void setBlockBoundsBasedOnState(IBlockAccess p_149719_1_, int p_149719_2_, int p_149719_3_, int p_149719_4_)
+    {
+        int l = p_149719_1_.getBlockMetadata(p_149719_2_, p_149719_3_, p_149719_4_);
+
+        if (l >= 2 && l <= 5)
+        {
+            this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.625F, 1.0F);
+        }
+        else
+        {
+            this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 0.125F, 1.0F);
+        }
+    }
+
+
+
+
+
+
+
+
+
 
     @Override
     public boolean isOpaqueCube()
@@ -103,12 +122,6 @@ public class BlockCSRenderer extends BlockCS {
             {
                 this.rotationDegree -= 360.0;
             }
-
-            //信标
-
-            //Matrix4f matrix = new Matrix4f();
-            //matrix.rotY(((TileEntityCS) ).getRotation());
-            //transform = TRSRTransformation.blockCenterToCorner(new TRSRTransformation(matrix)).compose(transform);
         }
     }
 

@@ -22,6 +22,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.ChatComponentText;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 import net.minecraftforge.common.IShearable;
 import net.minecraftforge.fluids.BlockFluidBase;
@@ -1023,6 +1024,19 @@ public class ScriptableWorld
             return NBTHelper.getCSFloatData(tile.getCompound(), name);
         }
      */
+
+
+    public void setBlockTexture(ScriptablePosition position, String id, String texture)
+    {
+        TileEntity tileEntity = world.getTileEntity((int)position.x, (int) position.y, (int) position.z);
+
+        if (tileEntity != null && tileEntity instanceof TileEntityCS)
+        {
+            TileEntityCS tile = (TileEntityCS) tileEntity;
+            tile.BTexture = new ResourceLocation(id, texture);;
+        }
+    }
+
 
 
 

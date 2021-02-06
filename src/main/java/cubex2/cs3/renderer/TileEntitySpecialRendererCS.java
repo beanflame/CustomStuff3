@@ -14,19 +14,8 @@ import org.lwjgl.opengl.GL12;
 
 public class TileEntitySpecialRendererCS extends TileEntitySpecialRenderer {
 
-
-    public IModelCustom model = AdvancedModelLoader.loadModel(new ResourceLocation("cs3",
-            "obj/magic_circle.obj"));
-
-    public ResourceLocation texture = new ResourceLocation("cs3",
-            "textures/blocks/magic_circle.png");
-
     public void render(TileEntityCS tile, double x, double y, double z, float partialTick) {
-
-        texture = tile.BTexture;
-        model = tile.BModel;
-
-        bindTexture(texture);
+        bindTexture(tile.BTexture);
         GL11.glPushMatrix();
         GL11.glEnable(GL12.GL_RESCALE_NORMAL);
         //------------------------------------------------------------------------
@@ -45,7 +34,7 @@ public class TileEntitySpecialRendererCS extends TileEntitySpecialRenderer {
         GL11.glScaled(tile.BSize, 1.0, tile.BSize);
         // GL11.glScaled(1.0, 1.0, 1.0);
         //CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-        model.renderAll();
+        tile.BModel.renderAll();
         GL11.glPopMatrix();
     }
 

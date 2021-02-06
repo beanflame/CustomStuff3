@@ -7,6 +7,8 @@ ELEM_PREFIX script/world/
 ELEM setBlockSize setBlockSize
 ELEM setBlockRotate setBlockRotate
 
+ELEM setBlockTexture setBlockTexture
+
 
 ELEM setBlock setBlock
 ELEM setBlockMetaData setBlockMetaData

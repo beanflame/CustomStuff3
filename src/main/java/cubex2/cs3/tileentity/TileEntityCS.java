@@ -32,6 +32,7 @@ public class TileEntityCS extends TileEntity
     public IModelCustom BModel = AdvancedModelLoader.loadModel(new ResourceLocation("cs3",
             "obj/magic_circle.obj"));
 
+    
 
     protected WrappedTileEntity wrappedTileEntity;
     protected TileEntityAttributes container;

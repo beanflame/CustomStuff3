@@ -24,6 +24,7 @@ import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.ChatComponentText;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
+import net.minecraftforge.client.model.AdvancedModelLoader;
 import net.minecraftforge.common.IShearable;
 import net.minecraftforge.fluids.BlockFluidBase;
 
@@ -1012,19 +1013,16 @@ public class ScriptableWorld
 
 
 
+    public void setBlockObj(ScriptablePosition position, String id, String obj)
+    {
+        TileEntity tileEntity = world.getTileEntity((int)position.x, (int) position.y, (int) position.z);
 
-
-
-
-    /*
-    TileEntity tileEntity = world.getTileEntity(x, y, z);
         if (tileEntity != null && tileEntity instanceof TileEntityCS)
         {
-            TileEntityCS tile = (TileEntityCS) tileEntity;
-            return NBTHelper.getCSFloatData(tile.getCompound(), name);
+                TileEntityCS tile = (TileEntityCS) tileEntity;
+                tile.BModel = AdvancedModelLoader.loadModel(new ResourceLocation(id, obj));
         }
-     */
-
+    }
 
     public void setBlockTexture(ScriptablePosition position, String id, String texture)
     {

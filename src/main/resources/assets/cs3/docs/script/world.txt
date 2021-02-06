@@ -8,7 +8,7 @@ ELEM setBlockSize setBlockSize
 ELEM setBlockRotate setBlockRotate
 
 ELEM setBlockTexture setBlockTexture
-
+ELEM setBlockObj setBlockObj
 
 ELEM setBlock setBlock
 ELEM setBlockMetaData setBlockMetaData

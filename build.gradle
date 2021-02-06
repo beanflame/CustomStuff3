@@ -44,7 +44,7 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "0.7.10-BF-0.1.0"
+version = "0.7.10-BF-0.1.1"
 group= "cubex2.cs3"
 archivesBaseName = "CustomStuff3"
 

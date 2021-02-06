@@ -1,0 +1,15 @@
+TITLE setBlockObj
+
+
+MAX_WIDTH
+
+TEXT --{
+setBlockObj(position, id, obj)
+
+Sets setBlockObj
+
+- position (int): The position
+- id (String): The MODID
+- obj (String): The Block obj
+
+}--

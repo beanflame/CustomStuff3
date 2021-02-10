@@ -28,5 +28,5 @@ jobs:
         uses: actions/upload-artifact@v2
         if: success()
         with:
-          name: CustomStuff3 - 0.1.0
-          path: build/libs/CustomStuff3-0.7.10-BF-0.1.0.jar
+          name: CustomStuff3 - 0.1.1
+          path: build/libs/CustomStuff3-0.7.10-BF-0.1.1.jar

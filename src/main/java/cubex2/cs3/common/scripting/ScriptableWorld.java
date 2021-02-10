@@ -1024,7 +1024,7 @@ public class ScriptableWorld
         }
     }
 
-    public void setBlockTexture(ScriptablePosition position String id, String texture)
+    public void setBlockTexture(ScriptablePosition position, String id, String texture)
     {
 TileEntity tileEntity = world.getTileEntity((int)position.x, (int) position.y, (int) 
 

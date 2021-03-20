@@ -950,14 +950,14 @@ public class ScriptableWorld {
 
     public String hasNewMessage() {
         if (!MessageHandler.messageQueue.isEmpty()) {
-            return ((String) MessageHandler.messageQueue.getFirst()).split("::")[0];
+            return (MessageHandler.messageQueue.getFirst()).split("::")[0];
         }
         return "";
     }
 
     public String getNewMessage() {
         if (!hasNewMessage().equals("")) {
-            return ((String) MessageHandler.messageQueue.removeFirst()).split("::")[1];
+            return (MessageHandler.messageQueue.removeFirst()).split("::")[1];
         }
         return "";
     }

@@ -1,13 +1,13 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "CustomStuff3",
+  "name": "Custom Stuff 3",
+  "description": "With this mod you can create content like blocks, items or recipes in-game using an easy-to-use GUI.",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "",
+  "url": "https://github.com/beanflame/CustomStuff3",
   "updateUrl": "",
-  "authors": ["ExampleDude"],
+  "authors": ["beanflame", "TansuoTro", "dbydd", "bingling_sama"],
   "credits": "The Forge and FML guys, for making this example",
   "logoFile": "",
   "screenshots": [],

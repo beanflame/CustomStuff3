@@ -45,7 +45,6 @@ public class CustomStuff3
 
         Config.init(event);
 
-
         proxy.preInitRendering();
     }
 

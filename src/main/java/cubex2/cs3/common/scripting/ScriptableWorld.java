@@ -2,6 +2,7 @@ package cubex2.cs3.common.scripting;
 
 import com.google.common.collect.Lists;
 import cubex2.cs3.common.BaseContentPack;
+import cubex2.cs3.handler.event.MessageHandler;
 import cubex2.cs3.tileentity.TileEntityCS;
 import cubex2.cs3.util.GeneralHelper;
 import cubex2.cs3.util.NBTHelper;
@@ -32,18 +33,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class ScriptableWorld
-{
+public class ScriptableWorld {
     private World world;
 
-    public ScriptableWorld(World world)
-    {
+    public ScriptableWorld(World world) {
         super();
         this.world = world;
     }
 
-    public void setMod(BaseContentPack mod)
-    {
+    public void setMod(BaseContentPack mod) {
     }
 
     /**
@@ -52,8 +50,7 @@ public class ScriptableWorld
      * @param position  The position
      * @param blockName The name of the block
      */
-    public void setBlock(ScriptablePosition position, String blockName)
-    {
+    public void setBlock(ScriptablePosition position, String blockName) {
         setBlock((int) position.x, (int) position.y, (int) position.z, blockName);
     }
 
@@ -64,8 +61,7 @@ public class ScriptableWorld
      * @param blockName       The name of the block
      * @param notifyNeighbors Should neighbor blocks notified about the change
      */
-    public void setBlock(ScriptablePosition position, String blockName, boolean notifyNeighbors)
-    {
+    public void setBlock(ScriptablePosition position, String blockName, boolean notifyNeighbors) {
         setBlock((int) position.x, (int) position.y, (int) position.z, blockName, notifyNeighbors);
     }
 
@@ -77,8 +73,7 @@ public class ScriptableWorld
      * @param z         The z coordinate
      * @param blockName The name of the block
      */
-    public void setBlock(int x, int y, int z, String blockName)
-    {
+    public void setBlock(int x, int y, int z, String blockName) {
         setBlock(x, y, z, blockName, true);
     }
 
@@ -91,12 +86,10 @@ public class ScriptableWorld
      * @param blockName       The name of the block
      * @param notifyNeighbors Should neighbor blocks notified about the change
      */
-    public void setBlock(int x, int y, int z, String blockName, boolean notifyNeighbors)
-    {
+    public void setBlock(int x, int y, int z, String blockName, boolean notifyNeighbors) {
         Block block = GeneralHelper.getBlock(blockName);
         world.setBlock(x, y, z, block);
-        if (notifyNeighbors)
-        {
+        if (notifyNeighbors) {
             world.notifyBlockChange(x, y, z, block);
         }
     }
@@ -107,8 +100,7 @@ public class ScriptableWorld
      * @param position The position
      * @param metadata The damage value of the block
      */
-    public void setBlockMetadata(ScriptablePosition position, int metadata)
-    {
+    public void setBlockMetadata(ScriptablePosition position, int metadata) {
         setBlockMetadata((int) position.x, (int) position.y, (int) position.z, metadata);
     }
 
@@ -120,8 +112,7 @@ public class ScriptableWorld
      * @param z        The z coordinate
      * @param metadata The damage value of the block
      */
-    public void setBlockMetadata(int x, int y, int z, int metadata)
-    {
+    public void setBlockMetadata(int x, int y, int z, int metadata) {
         world.setBlockMetadataWithNotify(x, y, z, metadata, 3);
         world.markBlockForUpdate(x, y, z);
     }
@@ -133,8 +124,7 @@ public class ScriptableWorld
      * @param blockName The block's name
      * @param metadata  The block's damage value
      */
-    public void setBlockAndMetadata(ScriptablePosition position, String blockName, int metadata)
-    {
+    public void setBlockAndMetadata(ScriptablePosition position, String blockName, int metadata) {
         setBlockAndMetadata((int) position.x, (int) position.y, (int) position.z, blockName, metadata);
     }
 
@@ -147,8 +137,7 @@ public class ScriptableWorld
      * @param blockName The block's name
      * @param metadata  The block's damage value
      */
-    public void setBlockAndMetadata(int x, int y, int z, String blockName, int metadata)
-    {
+    public void setBlockAndMetadata(int x, int y, int z, String blockName, int metadata) {
         world.setBlock(x, y, z, GeneralHelper.getBlock(blockName), metadata, 3);
     }
 
@@ -157,8 +146,7 @@ public class ScriptableWorld
      *
      * @param position The position
      */
-    public void harvestBlock(ScriptablePosition position)
-    {
+    public void harvestBlock(ScriptablePosition position) {
         harvestBlock((int) position.x, (int) position.y, (int) position.z);
     }
 
@@ -169,8 +157,7 @@ public class ScriptableWorld
      * @param y The y coordinate
      * @param z The z coordinate
      */
-    public void harvestBlock(int x, int y, int z)
-    {
+    public void harvestBlock(int x, int y, int z) {
         new Random();
         Block block = world.getBlock(x, y, z);
         int damage = world.getBlockMetadata(x, y, z);
@@ -183,13 +170,10 @@ public class ScriptableWorld
         double d = world.rand.nextFloat() * f + (1.0F - f) * 0.5D;
         double d1 = world.rand.nextFloat() * f + (1.0F - f) * 0.5D;
         double d2 = world.rand.nextFloat() * f + (1.0F - f) * 0.5D;
-        if (is.size() > 0)
-        {
+        if (is.size() > 0) {
             for (ItemStack is1 : is)
-                if (is1.stackSize != 0)
-                {
-                    if (!world.isRemote)
-                    {
+                if (is1.stackSize != 0) {
+                    if (!world.isRemote) {
                         EntityItem entityitem = new EntityItem(world, x + d, y + d1, z + d2, new ItemStack(is1.getItem(), is1.stackSize, is1.getItemDamage()));
                         entityitem.delayBeforeCanPickup = 10;
                         world.spawnEntityInWorld(entityitem);
@@ -203,8 +187,7 @@ public class ScriptableWorld
      *
      * @param time The time
      */
-    public void setTime(long time)
-    {
+    public void setTime(long time) {
         world.setWorldTime(time);
     }
 
@@ -213,8 +196,7 @@ public class ScriptableWorld
      *
      * @return The world time , gettimegetTime
      */
-    public long gettime()
-    {
+    public long getTime() {
         return world.getWorldTime();
     }
 
@@ -225,8 +207,7 @@ public class ScriptableWorld
      * @param strength The strength of the explosion
      * @param flaming  True if the explosion is a flaming explosion
      */
-    public void createExplosion(ScriptablePosition position, float strength, boolean flaming)
-    {
+    public void createExplosion(ScriptablePosition position, float strength, boolean flaming) {
         createExplosion(position.x, position.y, position.z, strength, flaming);
     }
 
@@ -239,8 +220,7 @@ public class ScriptableWorld
      * @param strength The strength of the explosion
      * @param flaming  True if the explosion is a flaming explosion
      */
-    public void createExplosion(double x, double y, double z, float strength, boolean flaming)
-    {
+    public void createExplosion(double x, double y, double z, float strength, boolean flaming) {
         world.newExplosion(null, x, y, z, strength, flaming, /* Huge explosion */true);
     }
 
@@ -249,8 +229,7 @@ public class ScriptableWorld
      *
      * @param position The position
      */
-    public void createThunderbolt(ScriptablePosition position)
-    {
+    public void createThunderbolt(ScriptablePosition position) {
         createThunderbolt(position.x, position.y, position.z);
     }
 
@@ -261,8 +240,7 @@ public class ScriptableWorld
      * @param y The y coordinate
      * @param z The z coordinate
      */
-    public void createThunderbolt(double x, double y, double z)
-    {
+    public void createThunderbolt(double x, double y, double z) {
         EntityLightningBolt entitylightningbolt = new EntityLightningBolt(world, x, y, z);
         world.spawnEntityInWorld(entitylightningbolt);
     }
@@ -273,8 +251,7 @@ public class ScriptableWorld
      * @param position The position
      * @param name     The name of the mob
      */
-    public void spawnMob(ScriptablePosition position, String name)
-    {
+    public void spawnMob(ScriptablePosition position, String name) {
         spawnMob(position.x, position.y, position.z, name);
     }
 
@@ -286,10 +263,8 @@ public class ScriptableWorld
      * @param z    The z coordinate
      * @param name The name of the mob
      */
-    public void spawnMob(double x, double y, double z, String name)
-    {
-        if (!world.isRemote)
-        {
+    public void spawnMob(double x, double y, double z, String name) {
+        if (!world.isRemote) {
             Entity entity = EntityList.createEntityByName(name, world);
             entity.setLocationAndAngles(x, y, z, world.rand.nextFloat() * 360F, 0.0F);
             world.spawnEntityInWorld(entity);
@@ -304,8 +279,7 @@ public class ScriptableWorld
      * @param count    The item's stack size
      * @param damage   The item's damage value
      */
-    public void spawnItem(ScriptablePosition position, String itemName, int count, int damage)
-    {
+    public void spawnItem(ScriptablePosition position, String itemName, int count, int damage) {
         spawnItem(position.x, position.y, position.z, itemName, count, damage);
     }
 
@@ -319,8 +293,7 @@ public class ScriptableWorld
      * @param count    The item's stack size
      * @param damage   The item's damage value
      */
-    public void spawnItem(double x, double y, double z, String itemName, int count, int damage)
-    {
+    public void spawnItem(double x, double y, double z, String itemName, int count, int damage) {
         if (world.isRemote)
             return;
         float f = 0.7F;
@@ -338,22 +311,18 @@ public class ScriptableWorld
      * @param weather  sun, rain or thundering
      * @param duration The duration
      */
-    public void setWeather(String weather, int duration)
-    {
-        if (weather.equals("sun"))
-        {
+    public void setWeather(String weather, int duration) {
+        if (weather.equals("sun")) {
             world.getWorldInfo().setRaining(false);
             world.getWorldInfo().setRainTime(0);
             world.getWorldInfo().setThundering(false);
             world.getWorldInfo().setThunderTime(0);
-        } else if (weather.equals("rain"))
-        {
+        } else if (weather.equals("rain")) {
             world.getWorldInfo().setRaining(true);
             world.getWorldInfo().setRainTime(duration);
             world.getWorldInfo().setThundering(false);
             world.getWorldInfo().setThunderTime(0);
-        } else if (weather.equals("thundering"))
-        {
+        } else if (weather.equals("thundering")) {
             world.getWorldInfo().setRaining(true);
             world.getWorldInfo().setRainTime(duration);
             world.getWorldInfo().setThundering(true);
@@ -366,8 +335,7 @@ public class ScriptableWorld
      *
      * @return true if it is raining, false otherwise
      */
-    public boolean isRaining()
-    {
+    public boolean isRaining() {
         return world.getWorldInfo().isRaining();
     }
 
@@ -376,8 +344,7 @@ public class ScriptableWorld
      *
      * @return true if it is thundering, false otherwise
      */
-    public boolean isThundering()
-    {
+    public boolean isThundering() {
         world.isThundering();
         return world.getWorldInfo().isThundering();
     }
@@ -388,8 +355,7 @@ public class ScriptableWorld
      * @param position The position
      * @return The block's name
      */
-    public String getBlockName(ScriptablePosition position)
-    {
+    public String getBlockName(ScriptablePosition position) {
         return getBlockName((int) position.x, (int) position.y, (int) position.z);
     }
 
@@ -401,8 +367,7 @@ public class ScriptableWorld
      * @param z The z coordinate
      * @return The block's name
      */
-    public String getBlockName(int x, int y, int z)
-    {
+    public String getBlockName(int x, int y, int z) {
         String name = GeneralHelper.getBlockName(world.getBlock(x, y, z));
         return name != null ? name : "minecraft:air";
     }
@@ -413,8 +378,7 @@ public class ScriptableWorld
      * @param position The position
      * @return The block's damage value
      */
-    public int getBlockMetadata(ScriptablePosition position)
-    {
+    public int getBlockMetadata(ScriptablePosition position) {
         return getBlockMetadata((int) position.x, (int) position.y, (int) position.z);
     }
 
@@ -426,8 +390,7 @@ public class ScriptableWorld
      * @param z The z coordinate
      * @return The block's damage value
      */
-    public int getBlockMetadata(int x, int y, int z)
-    {
+    public int getBlockMetadata(int x, int y, int z) {
         return world.getBlockMetadata(x, y, z);
     }
 
@@ -437,8 +400,7 @@ public class ScriptableWorld
      * @param position The position
      * @return The name of the biome
      */
-    public String getBiome(ScriptablePosition position)
-    {
+    public String getBiome(ScriptablePosition position) {
         return getBiome((int) position.x, (int) position.y, (int) position.z);
     }
 
@@ -450,8 +412,7 @@ public class ScriptableWorld
      * @param z The z coordinate
      * @return The name of the biome
      */
-    public String getBiome(int x, int y, int z)
-    {
+    public String getBiome(int x, int y, int z) {
         return world.getWorldChunkManager().getBiomeGenAt(x, z).biomeName;
     }
 
@@ -460,8 +421,7 @@ public class ScriptableWorld
      *
      * @param position The position
      */
-    public void shear(ScriptablePosition position)
-    {
+    public void shear(ScriptablePosition position) {
         shear((int) position.x, (int) position.y, (int) position.z);
     }
 
@@ -472,18 +432,14 @@ public class ScriptableWorld
      * @param y The y coordinate
      * @param z The z coordinate
      */
-    public void shear(int x, int y, int z)
-    {
+    public void shear(int x, int y, int z) {
         Block block = world.getBlock(x, y, z);
-        if (block instanceof IShearable)
-        {
+        if (block instanceof IShearable) {
             IShearable target = (IShearable) block;
-            if (target.isShearable(null, world, x, y, z))
-            {
+            if (target.isShearable(null, world, x, y, z)) {
                 ArrayList<ItemStack> drops = target.onSheared(null, world, x, y, z, EnchantmentHelper.getEnchantmentLevel(Enchantment.fortune.effectId, null));
                 Random rand = new Random();
-                for (ItemStack stack : drops)
-                {
+                for (ItemStack stack : drops) {
                     float f = 0.7F;
                     double d = rand.nextFloat() * f + (1.0F - f) * 0.5D;
                     double d1 = rand.nextFloat() * f + (1.0F - f) * 0.5D;
@@ -505,8 +461,7 @@ public class ScriptableWorld
      *                 entity name. You can give multiple values by dividing them with a ','
      * @return The amount of entities
      */
-    public int countEntities(ScriptablePosition pos, float radius, String entities)
-    {
+    public int countEntities(ScriptablePosition pos, float radius, String entities) {
         return countEntities((int) pos.x, (int) pos.y, (int) pos.z, radius, entities);
     }
 
@@ -521,37 +476,26 @@ public class ScriptableWorld
      *                 entity name. You can give multiple values by dividing them with a ','
      * @return The amount of entities
      */
-    public int countEntities(int x, int y, int z, float radius, String entities)
-    {
+    public int countEntities(int x, int y, int z, float radius, String entities) {
         int amount = 0;
-        for (String entity : entities.split(","))
-        {
+        for (String entity : entities.split(",")) {
             Class<? extends Entity> mobClass;
-            if (entity.equals("hostile"))
-            {
+            if (entity.equals("hostile")) {
                 mobClass = EntityMob.class;
-            } else if (entity.equals("animal"))
-            {
+            } else if (entity.equals("animal")) {
                 mobClass = EntityAnimal.class;
-            } else if (entity.equals("mob"))
-            {
+            } else if (entity.equals("mob")) {
                 mobClass = EntityLiving.class;
-            } else if (entity.equals("player"))
-            {
+            } else if (entity.equals("player")) {
                 mobClass = EntityPlayer.class;
-            } else if (entity.equals("item"))
-            {
+            } else if (entity.equals("item")) {
                 mobClass = EntityItem.class;
-            } else if (entity.equals("all"))
-            {
+            } else if (entity.equals("all")) {
                 mobClass = null;
-            } else
-            {
-                if (entity.matches("[0-9]+"))
-                {
+            } else {
+                if (entity.matches("[0-9]+")) {
                     mobClass = (Class<? extends Entity>) EntityList.stringToClassMapping.get(EntityList.getStringFromID(Integer.parseInt(entity)));
-                } else
-                {
+                } else {
                     mobClass = (Class<? extends Entity>) EntityList.stringToClassMapping.get(entity);
                 }
             }
@@ -570,8 +514,7 @@ public class ScriptableWorld
      *                 entity name. You can give multiple values by dividing them with a ','
      * @return The entities.
      */
-    public ScriptableEntity[] enumEntities(ScriptablePosition pos, float radius, String entities)
-    {
+    public ScriptableEntity[] enumEntities(ScriptablePosition pos, float radius, String entities) {
         return enumEntities((int) pos.x, (int) pos.y, (int) pos.z, radius, entities);
     }
 
@@ -586,44 +529,32 @@ public class ScriptableWorld
      *                 entity name. You can give multiple values by dividing them with a ','
      * @return The entities.
      */
-    public ScriptableEntity[] enumEntities(int x, int y, int z, float radius, String entities)
-    {
+    public ScriptableEntity[] enumEntities(int x, int y, int z, float radius, String entities) {
         List<ScriptableEntity> ret = Lists.newArrayList();
-        for (String entity : entities.split(","))
-        {
+        for (String entity : entities.split(",")) {
             Class<? extends Entity> mobClass = null;
-            if (entity.equals("hostile"))
-            {
+            if (entity.equals("hostile")) {
                 mobClass = EntityMob.class;
-            } else if (entity.equals("animal"))
-            {
+            } else if (entity.equals("animal")) {
                 mobClass = EntityAnimal.class;
-            } else if (entity.equals("mob"))
-            {
+            } else if (entity.equals("mob")) {
                 mobClass = EntityLiving.class;
-            } else if (entity.equals("player"))
-            {
+            } else if (entity.equals("player")) {
                 mobClass = EntityPlayer.class;
-            } else if (entity.equals("item"))
-            {
+            } else if (entity.equals("item")) {
                 mobClass = EntityItem.class;
-            } else if (entity.equals("all"))
-            {
+            } else if (entity.equals("all")) {
                 mobClass = null;
-            } else
-            {
-                if (entity.matches("[0-9]+"))
-                {
+            } else {
+                if (entity.matches("[0-9]+")) {
                     mobClass = (Class<? extends Entity>) EntityList.stringToClassMapping.get(EntityList.getStringFromID(Integer.parseInt(entity)));
-                } else
-                {
+                } else {
                     mobClass = (Class<? extends Entity>) EntityList.stringToClassMapping.get(entity);
                 }
             }
             AxisAlignedBB axis = AxisAlignedBB.getBoundingBox(x + 0.5 - radius, y + 0.5 - radius, z + 0.5 - radius, x + 0.5 + radius, y + 0.5 + radius, z + 0.5 + radius);
             List<Entity> list = mobClass == null ? world.getEntitiesWithinAABBExcludingEntity((Entity) null, axis) : world.getEntitiesWithinAABB(mobClass, axis);
-            for (Entity e : list)
-            {
+            for (Entity e : list) {
                 ret.add(new ScriptableEntity(e));
             }
         }
@@ -637,8 +568,7 @@ public class ScriptableWorld
      * @param position The block's position
      * @return
      */
-    public int getBlockLightLevel(ScriptablePosition position)
-    {
+    public int getBlockLightLevel(ScriptablePosition position) {
         return getBlockLightLevel((int) position.x, (int) position.y, (int) position.z);
     }
 
@@ -650,8 +580,7 @@ public class ScriptableWorld
      * @param z The z-coordinate
      * @return
      */
-    public int getBlockLightLevel(int x, int y, int z)
-    {
+    public int getBlockLightLevel(int x, int y, int z) {
         return world.getBlockLightValue(x, y, z);
     }
 
@@ -660,14 +589,10 @@ public class ScriptableWorld
      *
      * @param message The message to send.
      */
-    public void sendMessageToAllPlayers(String message)
-    {
-        if (!world.isRemote)
-        {
-            for (Object o : world.playerEntities)
-            {
-                if (o instanceof EntityPlayer)
-                {
+    public void sendMessageToAllPlayers(String message) {
+        if (!world.isRemote) {
+            for (Object o : world.playerEntities) {
+                if (o instanceof EntityPlayer) {
                     ((EntityPlayer) o).addChatComponentMessage(new ChatComponentText(message));
                 }
             }
@@ -680,13 +605,10 @@ public class ScriptableWorld
      * @param player  The player's username
      * @param message The message to send
      */
-    public void sendMessageToPlayer(String player, String message)
-    {
-        if (!world.isRemote)
-        {
+    public void sendMessageToPlayer(String player, String message) {
+        if (!world.isRemote) {
             EntityPlayer entityPlayer = world.getPlayerEntityByName(player);
-            if (entityPlayer != null)
-            {
+            if (entityPlayer != null) {
                 entityPlayer.addChatComponentMessage(new ChatComponentText(message));
             }
         }
@@ -700,8 +622,7 @@ public class ScriptableWorld
      * @param position The position
      * @return The type of the block or unknown if the block doesn't exist or isn't supported. The types equal to the CS2 block types.
      */
-    public String getBlockType(ScriptablePosition position)
-    {
+    public String getBlockType(ScriptablePosition position) {
         return getBlockType((int) position.x, (int) position.y, (int) position.z);
     }
 
@@ -715,8 +636,7 @@ public class ScriptableWorld
      * @param z The z-coordinate
      * @return The type of the block or unknown if the block doesn't exist or isn't supported. The types equal to the CS2 block types.
      */
-    public String getBlockType(int x, int y, int z)
-    {
+    public String getBlockType(int x, int y, int z) {
         Block block = world.getBlock(x, y, z);
         if (block == null)
             return "unknown";
@@ -768,8 +688,7 @@ public class ScriptableWorld
      * @param velY     The y velocity
      * @param velZ     The z velocity
      */
-    public void spawnParticle(String name, ScriptablePosition position, double velX, double velY, double velZ)
-    {
+    public void spawnParticle(String name, ScriptablePosition position, double velX, double velY, double velZ) {
         spawnParticle(name, position.x, position.y, position.z, velX, velY, velZ);
     }
 
@@ -787,8 +706,7 @@ public class ScriptableWorld
      * @param velY The y velocity
      * @param velZ The z velocity
      */
-    public void spawnParticle(String name, double x, double y, double z, double velX, double velY, double velZ)
-    {
+    public void spawnParticle(String name, double x, double y, double z, double velX, double velY, double velZ) {
         world.spawnParticle(name, x, y, z, velX, velY, velZ);
     }
 
@@ -798,8 +716,7 @@ public class ScriptableWorld
      * @param position The blocks position
      * @return The inventory or null if there wasn't any
      */
-    public ScriptableInventory getInventory(ScriptablePosition position)
-    {
+    public ScriptableInventory getInventory(ScriptablePosition position) {
         return getInventory((int) position.x, (int) position.y, (int) position.z);
     }
 
@@ -811,11 +728,9 @@ public class ScriptableWorld
      * @param z The z coordinate
      * @return The inventory or null if there wasn't any
      */
-    public ScriptableInventory getInventory(int x, int y, int z)
-    {
+    public ScriptableInventory getInventory(int x, int y, int z) {
         TileEntity te = world.getTileEntity(x, y, z);
-        if (te != null && te instanceof IInventory)
-        {
+        if (te != null && te instanceof IInventory) {
             return new ScriptableInventory((IInventory) te);
         }
         return null;
@@ -829,8 +744,7 @@ public class ScriptableWorld
      * @param name The data's name
      * @return The data or -1 if the data doesn't exist
      */
-    public int getTileEntityIntData(ScriptablePosition pos, String name)
-    {
+    public int getTileEntityIntData(ScriptablePosition pos, String name) {
         return getTileEntityIntData((int) pos.x, (int) pos.y, (int) pos.z, name);
     }
 
@@ -843,11 +757,9 @@ public class ScriptableWorld
      * @param name The data's name
      * @return The data or -1 if the data doesn't exist
      */
-    public int getTileEntityIntData(int x, int y, int z, String name)
-    {
+    public int getTileEntityIntData(int x, int y, int z, String name) {
         TileEntity tileEntity = world.getTileEntity(x, y, z);
-        if (tileEntity != null && tileEntity instanceof TileEntityCS)
-        {
+        if (tileEntity != null && tileEntity instanceof TileEntityCS) {
             TileEntityCS tile = (TileEntityCS) tileEntity;
             return NBTHelper.getCSIntData(tile.getCompound(), name);
         }
@@ -861,8 +773,7 @@ public class ScriptableWorld
      * @param name The data's name
      * @return The data or -1.0 if the data doesn't exist
      */
-    public float getTileEntityFloatData(ScriptablePosition pos, String name)
-    {
+    public float getTileEntityFloatData(ScriptablePosition pos, String name) {
         return getTileEntityFloatData((int) pos.x, (int) pos.y, (int) pos.z, name);
     }
 
@@ -875,11 +786,9 @@ public class ScriptableWorld
      * @param name The data's name
      * @return The data or -1.0 if the data doesn't exist
      */
-    public float getTileEntityFloatData(int x, int y, int z, String name)
-    {
+    public float getTileEntityFloatData(int x, int y, int z, String name) {
         TileEntity tileEntity = world.getTileEntity(x, y, z);
-        if (tileEntity != null && tileEntity instanceof TileEntityCS)
-        {
+        if (tileEntity != null && tileEntity instanceof TileEntityCS) {
             TileEntityCS tile = (TileEntityCS) tileEntity;
             return NBTHelper.getCSFloatData(tile.getCompound(), name);
         }
@@ -893,8 +802,7 @@ public class ScriptableWorld
      * @param name The data's name
      * @return The data or null if the data doesn't exist
      */
-    public String getTileEntityStringData(ScriptablePosition pos, String name)
-    {
+    public String getTileEntityStringData(ScriptablePosition pos, String name) {
         return getTileEntityStringData((int) pos.x, (int) pos.y, (int) pos.z, name);
     }
 
@@ -907,11 +815,9 @@ public class ScriptableWorld
      * @param name The data's name
      * @return The data or null if the data doesn't exist
      */
-    public String getTileEntityStringData(int x, int y, int z, String name)
-    {
+    public String getTileEntityStringData(int x, int y, int z, String name) {
         TileEntity tileEntity = world.getTileEntity(x, y, z);
-        if (tileEntity != null && tileEntity instanceof TileEntityCS)
-        {
+        if (tileEntity != null && tileEntity instanceof TileEntityCS) {
             TileEntityCS tile = (TileEntityCS) tileEntity;
             return NBTHelper.getCSStringData(tile.getCompound(), name);
         }
@@ -925,8 +831,7 @@ public class ScriptableWorld
      * @param name The data's name
      * @param data The data
      */
-    public void setTileEntityIntData(ScriptablePosition pos, String name, int data)
-    {
+    public void setTileEntityIntData(ScriptablePosition pos, String name, int data) {
         setTileEntityIntData((int) pos.x, (int) pos.y, (int) pos.z, name, data);
     }
 
@@ -939,11 +844,9 @@ public class ScriptableWorld
      * @param name The data's name
      * @param data The data
      */
-    public void setTileEntityIntData(int x, int y, int z, String name, int data)
-    {
+    public void setTileEntityIntData(int x, int y, int z, String name, int data) {
         TileEntity tileEntity = world.getTileEntity(x, y, z);
-        if (tileEntity != null && tileEntity instanceof TileEntityCS)
-        {
+        if (tileEntity != null && tileEntity instanceof TileEntityCS) {
             TileEntityCS tile = (TileEntityCS) tileEntity;
             NBTHelper.setCSIntData(tile.getCompound(), name, data);
         }
@@ -956,8 +859,7 @@ public class ScriptableWorld
      * @param name The data's name
      * @param data The data
      */
-    public void setTileEntityFloatData(ScriptablePosition pos, String name, float data)
-    {
+    public void setTileEntityFloatData(ScriptablePosition pos, String name, float data) {
         setTileEntityFloatData((int) pos.x, (int) pos.y, (int) pos.z, name, data);
     }
 
@@ -970,11 +872,9 @@ public class ScriptableWorld
      * @param name The data's name
      * @param data The data
      */
-    public void setTileEntityFloatData(int x, int y, int z, String name, float data)
-    {
+    public void setTileEntityFloatData(int x, int y, int z, String name, float data) {
         TileEntity tileEntity = world.getTileEntity(x, y, z);
-        if (tileEntity != null && tileEntity instanceof TileEntityCS)
-        {
+        if (tileEntity != null && tileEntity instanceof TileEntityCS) {
             TileEntityCS tile = (TileEntityCS) tileEntity;
             NBTHelper.setCSFloatData(tile.getCompound(), name, data);
         }
@@ -987,8 +887,7 @@ public class ScriptableWorld
      * @param name The data's name
      * @param data The data
      */
-    public void setTileEntityStringData(ScriptablePosition pos, String name, String data)
-    {
+    public void setTileEntityStringData(ScriptablePosition pos, String name, String data) {
         setTileEntityStringData((int) pos.x, (int) pos.y, (int) pos.z, name, data);
     }
 
@@ -1001,64 +900,66 @@ public class ScriptableWorld
      * @param name The data's name
      * @param data The data
      */
-    public void setTileEntityStringData(int x, int y, int z, String name, String data)
-    {
+    public void setTileEntityStringData(int x, int y, int z, String name, String data) {
         TileEntity tileEntity = world.getTileEntity(x, y, z);
-        if (tileEntity != null && tileEntity instanceof TileEntityCS)
-        {
+        if (tileEntity != null && tileEntity instanceof TileEntityCS) {
             TileEntityCS tile = (TileEntityCS) tileEntity;
             NBTHelper.setCSStringData(tile.getCompound(), name, data);
         }
     }
 
 
+    public void setBlockObj(ScriptablePosition position, String id, String obj) {
+        TileEntity tileEntity = world.getTileEntity((int) position.x, (int) position.y, (int) position.z);
 
-    public void setBlockObj(ScriptablePosition position, String id, String obj)
-    {
-        TileEntity tileEntity = world.getTileEntity((int)position.x, (int) position.y, (int) position.z);
-
-        if (tileEntity != null && tileEntity instanceof TileEntityCS)
-        {
-                TileEntityCS tile = (TileEntityCS) tileEntity;
-                tile.BModel = AdvancedModelLoader.loadModel(new ResourceLocation(id, obj));
-        }
-    }
-
-    public void setBlockTexture(ScriptablePosition position, String id, String texture)
-    {
-       TileEntity tileEntity = world.getTileEntity((int)position.x, (int) position.y, (int)position.z);
-
-        if (tileEntity != null && tileEntity instanceof TileEntityCS)
-        {
+        if (tileEntity != null && tileEntity instanceof TileEntityCS) {
             TileEntityCS tile = (TileEntityCS) tileEntity;
-            tile.BTexture = new ResourceLocation(id, texture);;
+            tile.BModel = AdvancedModelLoader.loadModel(new ResourceLocation(id, obj));
+        }
+    }
+
+    public void setBlockTexture(ScriptablePosition position, String id, String texture) {
+        TileEntity tileEntity = world.getTileEntity((int) position.x, (int) position.y, (int) position.z);
+
+        if (tileEntity != null && tileEntity instanceof TileEntityCS) {
+            TileEntityCS tile = (TileEntityCS) tileEntity;
+            tile.BTexture = new ResourceLocation(id, texture);
+            ;
         }
     }
 
 
+    public void setBlockSize(ScriptablePosition position, double i) {
+        TileEntity tileEntity = world.getTileEntity((int) position.x, (int) position.y, (int) position.z);
 
-
-    public void setBlockSize(ScriptablePosition position, double i)
-    {
-        TileEntity tileEntity = world.getTileEntity((int)position.x, (int) position.y, (int) position.z);
-
-        if (tileEntity != null && tileEntity instanceof TileEntityCS)
-        {
+        if (tileEntity != null && tileEntity instanceof TileEntityCS) {
             TileEntityCS tile = (TileEntityCS) tileEntity;
             tile.BSize = i;
         }
     }
 
 
-    public void setBlockRotate(ScriptablePosition position, double r)
-    {
-        TileEntity tileEntity = world.getTileEntity((int)position.x, (int) position.y, (int) position.z);
+    public void setBlockRotate(ScriptablePosition position, double r) {
+        TileEntity tileEntity = world.getTileEntity((int) position.x, (int) position.y, (int) position.z);
 
-        if (tileEntity != null && tileEntity instanceof TileEntityCS)
-        {
+        if (tileEntity != null && tileEntity instanceof TileEntityCS) {
             TileEntityCS tile = (TileEntityCS) tileEntity;
-            tile.BRotate =r;
+            tile.BRotate = r;
         }
+    }
+
+    public String hasNewMessage() {
+        if (!MessageHandler.messageQueue.isEmpty()) {
+            return ((String) MessageHandler.messageQueue.getFirst()).split("::")[0];
+        }
+        return "";
+    }
+
+    public String getNewMessage() {
+        if (!hasNewMessage().equals("")) {
+            return ((String) MessageHandler.messageQueue.removeFirst()).split("::")[1];
+        }
+        return "";
     }
 
 }

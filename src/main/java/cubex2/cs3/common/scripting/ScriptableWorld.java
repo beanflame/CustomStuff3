@@ -194,7 +194,7 @@ public class ScriptableWorld {
     /**
      * Gets the world time
      *
-     * @return The world time
+     * @return The world time , gettimegetTime
      */
     public long getTime() {
         return world.getWorldTime();

@@ -544,7 +544,7 @@ public class ScriptableWorld {
             } else if (entity.equals("item")) {
                 mobClass = EntityItem.class;
             } else if (entity.equals("all")) {
-                mobClass = null;
+                continue;
             } else {
                 if (entity.matches("[0-9]+")) {
                     mobClass = (Class<? extends Entity>) EntityList.stringToClassMapping.get(EntityList.getStringFromID(Integer.parseInt(entity)));
@@ -578,7 +578,7 @@ public class ScriptableWorld {
      * @param x The x-coordinate
      * @param y The y-coordinate
      * @param z The z-coordinate
-     * @return
+     * @return The block light level.
      */
     public int getBlockLightLevel(int x, int y, int z) {
         return world.getBlockLightValue(x, y, z);
@@ -730,7 +730,7 @@ public class ScriptableWorld {
      */
     public ScriptableInventory getInventory(int x, int y, int z) {
         TileEntity te = world.getTileEntity(x, y, z);
-        if (te != null && te instanceof IInventory) {
+        if (te != null & te instanceof IInventory) {
             return new ScriptableInventory((IInventory) te);
         }
         return null;
@@ -759,7 +759,7 @@ public class ScriptableWorld {
      */
     public int getTileEntityIntData(int x, int y, int z, String name) {
         TileEntity tileEntity = world.getTileEntity(x, y, z);
-        if (tileEntity != null && tileEntity instanceof TileEntityCS) {
+        if (tileEntity != null & tileEntity instanceof TileEntityCS) {
             TileEntityCS tile = (TileEntityCS) tileEntity;
             return NBTHelper.getCSIntData(tile.getCompound(), name);
         }
@@ -788,7 +788,7 @@ public class ScriptableWorld {
      */
     public float getTileEntityFloatData(int x, int y, int z, String name) {
         TileEntity tileEntity = world.getTileEntity(x, y, z);
-        if (tileEntity != null && tileEntity instanceof TileEntityCS) {
+        if (tileEntity != null & tileEntity instanceof TileEntityCS) {
             TileEntityCS tile = (TileEntityCS) tileEntity;
             return NBTHelper.getCSFloatData(tile.getCompound(), name);
         }
@@ -817,7 +817,7 @@ public class ScriptableWorld {
      */
     public String getTileEntityStringData(int x, int y, int z, String name) {
         TileEntity tileEntity = world.getTileEntity(x, y, z);
-        if (tileEntity != null && tileEntity instanceof TileEntityCS) {
+        if (tileEntity != null & tileEntity instanceof TileEntityCS) {
             TileEntityCS tile = (TileEntityCS) tileEntity;
             return NBTHelper.getCSStringData(tile.getCompound(), name);
         }
@@ -846,7 +846,7 @@ public class ScriptableWorld {
      */
     public void setTileEntityIntData(int x, int y, int z, String name, int data) {
         TileEntity tileEntity = world.getTileEntity(x, y, z);
-        if (tileEntity != null && tileEntity instanceof TileEntityCS) {
+        if (tileEntity != null & tileEntity instanceof TileEntityCS) {
             TileEntityCS tile = (TileEntityCS) tileEntity;
             NBTHelper.setCSIntData(tile.getCompound(), name, data);
         }
@@ -874,7 +874,7 @@ public class ScriptableWorld {
      */
     public void setTileEntityFloatData(int x, int y, int z, String name, float data) {
         TileEntity tileEntity = world.getTileEntity(x, y, z);
-        if (tileEntity != null && tileEntity instanceof TileEntityCS) {
+        if (tileEntity != null & tileEntity instanceof TileEntityCS) {
             TileEntityCS tile = (TileEntityCS) tileEntity;
             NBTHelper.setCSFloatData(tile.getCompound(), name, data);
         }
@@ -902,47 +902,84 @@ public class ScriptableWorld {
      */
     public void setTileEntityStringData(int x, int y, int z, String name, String data) {
         TileEntity tileEntity = world.getTileEntity(x, y, z);
-        if (tileEntity != null && tileEntity instanceof TileEntityCS) {
+        if (tileEntity != null & tileEntity instanceof TileEntityCS) {
             TileEntityCS tile = (TileEntityCS) tileEntity;
             NBTHelper.setCSStringData(tile.getCompound(), name, data);
         }
     }
 
-
+    /**
+     * Sets the block's Obj model.
+     *
+     * @param position The block's position
+     * @param id       ID
+     * @param obj      Obj model
+     */
     public void setBlockObj(ScriptablePosition position, String id, String obj) {
-        TileEntity tileEntity = world.getTileEntity((int) position.x, (int) position.y, (int) position.z);
+        setBlockObj((int) position.x, (int) position.y, (int) position.z, id, obj);
+    }
 
-        if (tileEntity != null && tileEntity instanceof TileEntityCS) {
+    public void setBlockObj(int x, int y, int z, String id, String obj) {
+        TileEntity tileEntity = world.getTileEntity(x, y, z);
+
+        if (tileEntity != null & tileEntity instanceof TileEntityCS) {
             TileEntityCS tile = (TileEntityCS) tileEntity;
             tile.BModel = AdvancedModelLoader.loadModel(new ResourceLocation(id, obj));
         }
     }
 
+    /**
+     * Sets the block's texture.
+     * @param position The block's position
+     * @param id       ID
+     * @param texture  Texture
+     */
     public void setBlockTexture(ScriptablePosition position, String id, String texture) {
-        TileEntity tileEntity = world.getTileEntity((int) position.x, (int) position.y, (int) position.z);
+        setBlockTexture( (int) position.x, (int) position.y, (int) position.z, id, texture);
+    }
 
-        if (tileEntity != null && tileEntity instanceof TileEntityCS) {
+    public void setBlockTexture(int x, int y, int z, String id, String texture) {
+        TileEntity tileEntity = world.getTileEntity(x, y, z);
+
+        if (tileEntity != null & tileEntity instanceof TileEntityCS) {
             TileEntityCS tile = (TileEntityCS) tileEntity;
             tile.BTexture = new ResourceLocation(id, texture);
-            ;
         }
     }
 
-
+    /**
+     * Sets the block's size.
+     *
+     * @param position The block's position
+     * @param i        size
+     */
     public void setBlockSize(ScriptablePosition position, double i) {
-        TileEntity tileEntity = world.getTileEntity((int) position.x, (int) position.y, (int) position.z);
+        setBlockSize((int) position.x, (int) position.y, (int) position.y, i);
+    }
 
-        if (tileEntity != null && tileEntity instanceof TileEntityCS) {
+    public void setBlockSize(int x, int y, int z, double i) {
+        TileEntity tileEntity = world.getTileEntity(x, y, z);
+
+        if (tileEntity != null & tileEntity instanceof TileEntityCS) {
             TileEntityCS tile = (TileEntityCS) tileEntity;
             tile.BSize = i;
         }
     }
 
-
+    /**
+     * Rotate a block.
+     *
+     * @param position The block's position
+     * @param r        Rotate angel
+     */
     public void setBlockRotate(ScriptablePosition position, double r) {
-        TileEntity tileEntity = world.getTileEntity((int) position.x, (int) position.y, (int) position.z);
+        setBlockRotate((int) position.x, (int) position.y, (int) position.z, r);
+    }
 
-        if (tileEntity != null && tileEntity instanceof TileEntityCS) {
+    public void setBlockRotate(int x, int y, int z, double r) {
+        TileEntity tileEntity = world.getTileEntity(x, y, z);
+
+        if (tileEntity != null & tileEntity instanceof TileEntityCS) {
             TileEntityCS tile = (TileEntityCS) tileEntity;
             tile.BRotate = r;
         }

@@ -25,7 +25,7 @@ public class MessageHandler {
 //        }
 //        return null;
 //    }
-    public static Map<String, String> messageMap = new HashMap<>();
+    public static Map<String, String> messageMap = new HashMap<String, String>();
 
     @SubscribeEvent
     public void onPlayerJoin(PlayerEvent.PlayerLoggedInEvent event) {

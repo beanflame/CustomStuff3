@@ -224,6 +224,10 @@ public class ScriptableEntityPlayer extends ScriptableEntityLiving
         return MessageHandler.messageMap.get(player.getDisplayName());
     }
 
+    // TODO Player send command...
+    public void sendCommand(String command) {
+    }
+
     /**
      * Sets the current item in use, so onUsing is called.
      */

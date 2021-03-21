@@ -24,23 +24,11 @@ public enum EnumBlockType
     FACING("facing", BlockCSFacing.class, FacingAttributes.class, ItemCSBlockFacing.class),
     FENCE("fence", BlockCSFence.class, FenceAttributes.class),
     FENCE_GATE("fenceGate", BlockCSFenceGate.class, FenceGateAttributes.class),
-
     FLAT("flat", BlockCSFlat.class, FlatAttributes.class),
-
-
-
-    // 新的方块   renderer       渲染器    平面渲染器       flatrenderer  BlockCSFlatRenderer        豆焰
-
     FLATRENDERER("BlockRenderer", BlockCSRenderer.class, BlockRendererAttributes.class),
-
-
     FLUID("fluid", BlockCSFluid.class, FluidAttributes.class, ItemCSFluid.class),
     // FURNACE("furnace", BlockCSFurnace.class, BlockFurnaceAttributes.class, ItemCSBlockFacing.class),
-   
     GRAVITY("gravity", BlockCSGravity.class, GravityAttributes.class),
-
-
-
     LADDER("ladder", BlockCSLadder.class, LadderAttributes.class),
     NORMAL("normal", BlockCSNormal.class, BlockAttributes.class),
     PANE("pane", BlockCSPane.class, PaneAttributes.class),

@@ -20,6 +20,7 @@ import cubex2.cs3.util.GeneralHelper;
 import cubex2.cs3.util.JavaScriptHelper;
 import net.minecraft.block.Block;
 import net.minecraft.client.entity.EntityClientPlayerMP;
+import net.minecraft.command.ICommandSender;
 import net.minecraft.command.ServerCommand;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.player.EntityPlayer;
@@ -28,6 +29,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.*;
 import net.minecraft.world.World;
@@ -118,7 +120,7 @@ public class ScriptableEntityPlayer extends ScriptableEntityLiving
         } else if (gui.getType() == EnumGuiType.CONTAINER && !player.worldObj.isRemote)
         {
             TileEntity te = player.worldObj.getTileEntity(x, y, z);
-            if (te != null && te instanceof TileEntityInventory)
+            if (te != null & te instanceof TileEntityInventory)
             {
                 PacketOpenCustomGuiServer.openGuiOnServer((EntityPlayerMP) player, new PacketOpenUserContainerGuiClient(gui, x, y, z),
                                                           new ContainerBasic(gui, player, (IInventory) te));
@@ -226,7 +228,8 @@ public class ScriptableEntityPlayer extends ScriptableEntityLiving
     }
 
     public void sendCommand(String command) {
-        sendChat("/" + command);
+        MinecraftServer server = MinecraftServer.getServer();
+        ClientCommandHandler.instance.executeCommand(server, "/" + command);
     }
 
     /**
@@ -297,34 +300,30 @@ public class ScriptableEntityPlayer extends ScriptableEntityLiving
             side = 1;
         } else if (block != Blocks.vine && block != Blocks.tallgrass && block != Blocks.deadbush && (block == Blocks.air || !block.isReplaceable(world, x, y, z)))
         {
-            if (side == 0)
-            {
-                --y;
-            }
+            switch (side) {
+                case 0 :
+                    --y;
+                    break;
 
-            if (side == 1)
-            {
-                ++y;
-            }
+                case 1 :
+                    ++y;
+                    break;
 
-            if (side == 2)
-            {
-                --z;
-            }
+                case 2 :
+                    --z;
+                    break;
 
-            if (side == 3)
-            {
-                ++z;
-            }
+                case 3 :
+                    ++z;
+                    break;
 
-            if (side == 4)
-            {
-                --x;
-            }
+                case 4 :
+                    --x;
+                    break;
 
-            if (side == 5)
-            {
-                ++x;
+                case 5 :
+                    ++x;
+                    break;
             }
         }
 
@@ -479,7 +478,7 @@ public class ScriptableEntityPlayer extends ScriptableEntityLiving
     /**
      * Gets the player's experience
      *
-     * @return
+     * @return The experience
      */
     public int getExperience()
     {
@@ -489,7 +488,7 @@ public class ScriptableEntityPlayer extends ScriptableEntityLiving
     /**
      * Gets the player's level
      *
-     * @return
+     * @return The level
      */
     public int getExperienceLevel()
     {
@@ -499,7 +498,7 @@ public class ScriptableEntityPlayer extends ScriptableEntityLiving
     /**
      * Gets the player's horizontal look angle
      *
-     * @return
+     * @return The horizontal look angle
      */
     public float getHorizontalAngle()
     {
@@ -509,7 +508,7 @@ public class ScriptableEntityPlayer extends ScriptableEntityLiving
     /**
      * Gets the player's vertical look angle
      *
-     * @return
+     * @return The vertical look angle
      */
     public float getVerticalAngle()
     {
@@ -519,7 +518,7 @@ public class ScriptableEntityPlayer extends ScriptableEntityLiving
     /**
      * Gets the player's username
      *
-     * @return
+     * @return The player's username
      */
     public String getUsername()
     {
@@ -529,7 +528,7 @@ public class ScriptableEntityPlayer extends ScriptableEntityLiving
     /**
      * Check if the player is sneaking
      *
-     * @return
+     * @return If the player is sneaking
      */
     public boolean isSneaking()
     {
@@ -539,7 +538,7 @@ public class ScriptableEntityPlayer extends ScriptableEntityLiving
     /**
      * Checks if the player is sprinting
      *
-     * @return
+     * @return If the player is sprinting
      */
     public boolean isSprinting()
     {
@@ -553,7 +552,7 @@ public class ScriptableEntityPlayer extends ScriptableEntityLiving
      */
     public void setMaxHealth(int value)
     {
-        value = value < 1 ? 1 : value;
+        value = Math.max(value, 1);
         player.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(value);
     }
 
@@ -589,7 +588,7 @@ public class ScriptableEntityPlayer extends ScriptableEntityLiving
     /**
      * Gets the players inventory.
      *
-     * @return
+     * @return The inventory
      */
     public ScriptableInventory getInventory()
     {

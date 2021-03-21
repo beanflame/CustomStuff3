@@ -10,6 +10,7 @@ import cubex2.cs3.gui.ContainerBasic;
 import cubex2.cs3.gui.EnumGuiType;
 import cubex2.cs3.gui.InventoryItemStack;
 import cubex2.cs3.gui.WindowNormal;
+import cubex2.cs3.handler.event.MessageHandler;
 import cubex2.cs3.ingame.gui.GuiBase;
 import cubex2.cs3.network.PacketOpenCustomGuiServer;
 import cubex2.cs3.network.PacketOpenUserContainerGuiClient;
@@ -212,6 +213,15 @@ public class ScriptableEntityPlayer extends ScriptableEntityLiving
             if (ClientCommandHandler.instance.executeCommand(player, chat) != 0) return;
             ((EntityClientPlayerMP) player).sendChatMessage(chat);
         }
+    }
+
+    /**
+     * Gets the player's latest chat message.
+     *
+     * @return The chat message
+     */
+    public String getPlayerSendMessage() {
+        return MessageHandler.messageMap.get(player.getDisplayName());
     }
 
     /**

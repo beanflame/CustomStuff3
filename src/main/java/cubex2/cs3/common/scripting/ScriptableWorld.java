@@ -985,19 +985,18 @@ public class ScriptableWorld {
         }
     }
 
-    public String hasNewMessage() {
-        if (!MessageHandler.messageQueue.isEmpty()) {
-            return (MessageHandler.messageQueue.getFirst()).split("::")[0];
-        }
-        return "";
-    }
-
-    public String getNewMessage() {
-        if (!hasNewMessage().equals("")) {
-            return (MessageHandler.messageQueue.removeFirst()).split("::")[1];
-        }
-        return "";
-    }
+//    public String hasNewMessage() {
+//        if (!MessageHandler.messageQueue.isEmpty()) {
+//            return (MessageHandler.messageQueue.getFirst()).split("::")[0];
+//        }
+//        return "";
+//    }
+//
+//    public String getNewMessage() {
+//        if (!hasNewMessage().equals("")) {
+//            return (MessageHandler.messageQueue.removeFirst()).split("::")[1];
+//        }
+//        return "";
+//    }
 
 }
-

@@ -20,6 +20,7 @@ import cubex2.cs3.util.GeneralHelper;
 import cubex2.cs3.util.JavaScriptHelper;
 import net.minecraft.block.Block;
 import net.minecraft.client.entity.EntityClientPlayerMP;
+import net.minecraft.command.ServerCommand;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -224,8 +225,8 @@ public class ScriptableEntityPlayer extends ScriptableEntityLiving
         return MessageHandler.messageMap.get(player.getDisplayName());
     }
 
-    // TODO Player send command...
     public void sendCommand(String command) {
+        sendChat("/" + command);
     }
 
     /**

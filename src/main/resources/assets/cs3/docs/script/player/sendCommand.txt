@@ -1,0 +1,10 @@
+TITLE sendCommand
+MAX_WIDTH
+
+TEXT --{
+sendCommand(command)
+
+Execute the command.
+
+- command (string): The command without "/".
+}--

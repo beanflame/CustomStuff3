@@ -12,6 +12,9 @@ ELEM setStepHeight setStepHeight
 ELEM getStepHeight getStepHeight
 ELEM sendMessage sendMessage
 ELEM sendChat sendChat
+ELEM sendCommand sendCommand
+ELEM hasLatestMessage hasLatestMessage
+ELEM getLatestMessage getLatestMessage
 ELEM setItemInUse setItemInUse
 ELEM placeBlock placeBlock
 ELEM getLookX getLookX

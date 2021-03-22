@@ -219,14 +219,28 @@ public class ScriptableEntityPlayer extends ScriptableEntityLiving
     }
 
     /**
-     * Gets the player's latest chat message.
+     * Gets the latest chat message.
      *
      * @return The chat message
      */
-    public String getPlayerSendMessage() {
-        return MessageHandler.messageMap.get(player.getDisplayName());
+    public String getLatestMessage() {
+        return MessageHandler.latestMessage;
     }
 
+    /**
+     * Has latest message.
+     *
+     * @return Has latest message
+     */
+    public boolean hasLatestMessage() {
+        return !MessageHandler.latestMessage.equals("");
+    }
+
+    /**
+     * Execute the command ignore the permission.
+     *
+     * @param command The command
+     */
     public void sendCommand(String command) {
         MinecraftServer server = MinecraftServer.getServer();
         ClientCommandHandler.instance.executeCommand(server, "/" + command);

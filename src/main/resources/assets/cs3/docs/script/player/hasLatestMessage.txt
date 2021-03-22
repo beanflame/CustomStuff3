@@ -1,0 +1,8 @@
+TITLE hasLatestMessage
+MAX_WIDTH
+
+TEXT --{
+bool hasLatestMessage()
+
+Returns true if the latest message doesn't equal "".
+}--

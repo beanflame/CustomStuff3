@@ -1,0 +1,8 @@
+TITLE getLatestMessage
+MAX_WIDTH
+
+TEXT --{
+String getLatestMessage()
+
+Returns the latest chat message player sent.
+}--

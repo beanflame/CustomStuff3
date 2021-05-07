@@ -29,4 +29,4 @@ jobs:
         if: success()
         with:
           name: CustomStuff3 - 0.1.1
-          path: build/libs/CustomStuff3-0.7.10-BF-0.1.1.jar
+          path: build/libs/*.jar

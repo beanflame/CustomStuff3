@@ -51,7 +51,8 @@ minecraft {
 
 dependencies {
 
-    compile "rhino:js:1.7R2"
+    // compile "rhino:js:1.7R2"
+	implementation "rhino:js:1.7R2"
 
 }
 

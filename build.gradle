@@ -30,7 +30,7 @@ buildscript {
 
     // 依赖库
     dependencies {
-        classpath ('cn.beanflame.forge:LonganForgeGradle:1.2-1.1.0') {
+          classpath ("io.github.longan-studio:LonganForgeGradle:1.2-1.1.0.3") {
             changing = true
         }
     }

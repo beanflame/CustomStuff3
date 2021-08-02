@@ -28,9 +28,9 @@ buildscript {
         }
     }
 
-    // 依赖库
+    	// 依赖库
     dependencies {
-          classpath ("io.github.longan-studio:LonganForgeGradle:1.2-1.1.0.3") {
+        classpath ("io.github.longan-studio:LonganForgeGradle-1.2:1.1.0.6") {
             changing = true
         }
     }

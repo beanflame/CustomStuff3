@@ -28,9 +28,9 @@ buildscript {
         }
     }
 
-    	// 依赖库
+    // 依赖库
     dependencies {
-        classpath ("io.github.longan-studio:LonganForgeGradle-1.2:1.1.0.6") {
+        classpath ("io.github.longan-studio:LonganForgeGradle-1.2:1.1.0.7.20210804") {
             changing = true
         }
     }
@@ -50,6 +50,37 @@ targetCompatibility = 1.8
 
 // 加载 LonganForgeGradle 插件，那是 forge 有用的呢
 apply plugin: 'forge'
+
+
+//设置镜像站
+mirrorstation {
+    
+	
+	// longan
+	mcJsonUrl = "https://longan-studio.github.io/maven/minecraft/versions/{MC_VERSION}/{MC_VERSION}.json"
+	mcJarUrl = "https://longan-studio.github.io/maven/minecraft/versions/{MC_VERSION}/{MC_VERSION}.jar"
+	mcServerUrl = "https://longan-studio.github.io/maven/minecraft/versions/{MC_VERSION}/minecraft_server.{MC_VERSION}.jar"
+	mcpUrl = "https://longan-studio.github.io/maven/minecraft/mcp/fernflower-fix-1.0.zip"
+	//assetsUrl = "https://resources.download.minecraft.net"
+	//libraryUrl = "https://libraries.minecraft.net/"
+	assetsIndexUrl = "https://longan-studio.github.io/maven/minecraft/indexes/{ASSET_INDEX}.json"
+	
+	// ------------------------------------------------------------------------------------------------------------------
+	
+	// mcJsonUrl = "https://s3.amazonaws.com/Minecraft.Download/versions/{MC_VERSION}/{MC_VERSION}.json"
+	// mcJarUrl = "https://s3.amazonaws.com/Minecraft.Download/versions/{MC_VERSION}/{MC_VERSION}.jar"
+	// mcServerUrl = "https://s3.amazonaws.com/Minecraft.Download/versions/{MC_VERSION}/minecraft_server.{MC_VERSION}.jar"
+	// mcpUrl = "https://files.minecraftforge.net/fernflower-fix-1.0.zip"
+	// assetsUrl = "https://resources.download.minecraft.net"
+	// libraryUrl = "https://libraries.minecraft.net/"
+	// assetsIndexUrl = "https://s3.amazonaws.com/Minecraft.Download/indexes/{ASSET_INDEX}.json"
+
+	longanMavenUrl  = "https://longan.beanflame.cn/maven"
+	aliyunMavenUrl  = "https://maven.aliyun.com/repository/public"
+	mavenMavenUrl  = "https://repo1.maven.org/maven2"
+	forgeMavenUrl = "https://maven.minecraftforge.net"
+}
+
 
 // MOD 版本信息 , 别忘写版本信息
 version = "0.7.10-BF-0.1.3-alpha-1"
